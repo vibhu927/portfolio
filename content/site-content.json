@@ -1,0 +1,367 @@
+{
+  "hero": {
+    "sticker": "✨ Available for AI PM roles",
+    "heading": {
+      "line1": "Engineer who",
+      "line2gradient": "ships product,",
+      "line3": "not just",
+      "line3italic": "code."
+    },
+    "description": "I'm <strong>Vaibhav Narula</strong> — a senior .NET / React engineer with 3+ years of full-stack chops, quietly building an AI tools portfolio and pivoting into <strong>AI Product Management.</strong>",
+    "cta": {
+      "primary": {
+        "label": "View case studies",
+        "href": "/projects"
+      },
+      "secondary": {
+        "label": "See the résumé",
+        "href": "/resume"
+      },
+      "tertiary": {
+        "label": "Say hi →",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": {
+    "currently": "Shipping AI tools while I earn the PM stripes.",
+    "stat1": {
+      "value": "3+",
+      "label": "years shipping full-stack"
+    },
+    "stat2": {
+      "value": "4",
+      "label": "AI tools built solo"
+    },
+    "stat3": {
+      "value": ".NET",
+      "label": "+ React · Next · Azure · AWS"
+    },
+    "stat4": {
+      "value": "Certified",
+      "label": "Product Management · Cloud Architecture · AWS"
+    },
+    "stat5": "Currently playing with Claude Code, Cursor, UIPath, Opal, Pomelli, Ollama."
+  },
+  "projects": [
+    {
+      "slug": "ai-linkedin-automator",
+      "emoji": "🪄",
+      "image": "",
+      "title": "AI LinkedIn Automator",
+      "description": "Automated ideas posting as per your need on LinkedIn — scheduled and shipped on autopilot.",
+      "tags": [
+        "Google-AI-Studio",
+        "Opencode"
+      ],
+      "gradient": "from-violet to-hotpink",
+      "dotColor": "bg-violet",
+      "category": "AI Tools",
+      "liveUrl": "",
+      "problem": "This project was born from a personal pain point — a gap in the market that no existing tool addressed well enough.",
+      "keyDecisions": "The stack was chosen to build it super fast through the new Google AI Studio using Gemini API keys.",
+      "outcome": "Shipped end-to-end, self-initiated, and fully documented. A proper case study from problem to outcome."
+    },
+    {
+      "slug": "beyond-content",
+      "emoji": "💡",
+      "image": "",
+      "title": "Beyond C",
+      "description": "Beyond C is a creator collaboration platform that connects brands, creators, and agencies to build impactful campaigns.",
+      "tags": [
+        "Next.js",
+        "Supabase",
+        "PostgresSQL",
+        "Meta-OAuth"
+      ],
+      "gradient": "from-hotpink to-tangerine",
+      "dotColor": "bg-hotpink",
+      "category": "Social Media Marketplace",
+      "liveUrl": "",
+      "problem": "Brands struggle to discover the right creators and manage influencer campaigns efficiently across fragmented tools.",
+      "keyDecisions": "Built a unified platform that brings brands, creators, and agencies together with integrated campaign management, messaging, and analytics.",
+      "outcome": "Streamlined creator discovery and campaign execution, reducing operational complexity while improving collaboration and campaign ROI."
+    },
+    {
+      "slug": "leads-finder",
+      "emoji": "🎯",
+      "image": "",
+      "title": "Leads Finder",
+      "description": "Describe your ideal customer in plain English — get a ranked, enriched list of real ones by morning.",
+      "tags": [
+        ".NET Core",
+        "React",
+        "Azure Functions",
+        "OpenAI"
+      ],
+      "gradient": "from-tangerine to-hotpink",
+      "dotColor": "bg-tangerine",
+      "category": "AI Tools",
+      "liveUrl": "",
+      "problem": "This project was born from a personal pain point — a gap in the market that no existing tool addressed well enough.",
+      "keyDecisions": "The stack was chosen for speed and reliability: .NET Core, React, Azure Functions, OpenAI. Each choice was driven by what would ship fastest without compromising on quality.",
+      "outcome": "Shipped end-to-end, self-initiated, and fully documented. A proper case study from problem to outcome."
+    },
+    {
+      "slug": "agentic-workflow-summarizer",
+      "emoji": "🧵",
+      "image": "",
+      "title": "Agentic Workflow Summarizer",
+      "description": "An agent that watches your multi-step workflows and hands you a plain-English post-mortem.",
+      "tags": [
+        "Python",
+        "LangGraph",
+        "Ollama",
+        "Next.js"
+      ],
+      "gradient": "from-cyan to-indigo",
+      "dotColor": "bg-cyan",
+      "category": "Agents",
+      "liveUrl": "",
+      "problem": "This project was born from a personal pain point — a gap in the market that no existing tool addressed well enough.",
+      "keyDecisions": "The stack was chosen for speed and reliability: Python, LangGraph, Ollama, Next.js. Each choice was driven by what would ship fastest without compromising on quality.",
+      "outcome": "Shipped end-to-end, self-initiated, and fully documented. A proper case study from problem to outcome."
+    }
+  ],
+  "tools": [
+    {
+      "name": "NotebookLM",
+      "description": "Long-form research synthesis"
+    },
+    {
+      "name": "Claude Code",
+      "description": "Pair-programmer of choice"
+    },
+    {
+      "name": "n8n",
+      "description": "Glue for every workflow I ship"
+    },
+    {
+      "name": "ComfyUI",
+      "description": "Visual pipelines that don't lie"
+    },
+    {
+      "name": "Leonardo AI",
+      "description": "Fast concept art"
+    },
+    {
+      "name": "HeyGen",
+      "description": "Video without a studio"
+    },
+    {
+      "name": "ElevenLabs",
+      "description": "Voice that actually feels"
+    },
+    {
+      "name": "Ollama",
+      "description": "Local-first, private-by-default"
+    }
+  ],
+  "cta": {
+    "heading": "Hiring for AI PM?",
+    "description": "I'd rather chat than send another cold DM. Book a call, drop an email, or just say hi.",
+    "buttonLabel": "Get in touch"
+  },
+  "about": {
+    "heading": {
+      "line1": "Engineer by trade.",
+      "line2gradient": "Product person",
+      "line3italic": "obsession."
+    },
+    "bio": [
+      "I'm Vaibhav — senior software engineer with 3+ years of full-stack experience across the .NET and JavaScript worlds. I've spent most of that time in the enterprise trenches, shipping React and Next.js frontends onto .NET Core and Azure backends, and picking up MERN/MEAN work along the way.",
+      "Somewhere in the last 18 months, my curiosity outgrew the ticket queue. I started building AI tools for myself on nights and weekends — four of them, so far — and each one taught me that the hard part was never the code. It was scoping, sequencing, and knowing what <em>not</em> to build.",
+      "That's the muscle I want to grow next. I'm pivoting into <strong>AI Product Management</strong> — not because engineering bored me, but because the most interesting decisions in AI products live one layer up: what to build, for whom, with what tradeoffs, at what pace. I want to be in that room."
+    ],
+    "timeline": [
+      {
+        "year": "2022",
+        "title": "Started as a .NET engineer",
+        "description": "Joined the enterprise trenches — .NET Core, Azure, MERN/MEAN. Learned that shipping is a team sport and that most production bugs live in the seams between systems, not the systems themselves.",
+        "colorClass": "bg-violet",
+        "dotClass": "bg-violet"
+      },
+      {
+        "year": "2023",
+        "title": "Went full-stack + cloud",
+        "description": "Owned end-to-end features across React, Next.js, and Azure. Got the Cloud Computing Architecture cert. Started asking 'why are we building this?' more often than 'how do we build this?'.",
+        "colorClass": "bg-hotpink",
+        "dotClass": "bg-hotpink"
+      },
+      {
+        "year": "2024",
+        "title": "The AI switch flipped",
+        "description": "Fell hard for the modern AI stack — Claude Code, n8n, ComfyUI, Ollama, ElevenLabs. Realized my engineering superpower isn't code, it's shipping the thing end-to-end while everyone else prototypes.",
+        "colorClass": "bg-tangerine",
+        "dotClass": "bg-tangerine"
+      },
+      {
+        "year": "2025",
+        "title": "Built 4 AI tools solo",
+        "description": "LinkedIn Automator, Idea Curator, Leads Finder, Agentic Workflow Summarizer — all self-initiated, all documented as case studies. Earned the PM certification along the way.",
+        "colorClass": "bg-cyan",
+        "dotClass": "bg-cyan"
+      },
+      {
+        "year": "2026",
+        "title": "Making the pivot official",
+        "description": "Actively pursuing AI Product Management roles. I want to sit where engineering context, AI intuition, and product judgment overlap — because that's where the interesting decisions get made.",
+        "colorClass": "bg-lime",
+        "dotClass": "bg-lime"
+      }
+    ],
+    "toolbelt": {
+      "engineering": [
+        ".NET Core",
+        "C#",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "Azure",
+        "MongoDB",
+        "SQL"
+      ],
+      "ai": [
+        "OpenAI API",
+        "LangGraph",
+        "n8n",
+        "Ollama",
+        "pgvector",
+        "Prompt design",
+        "Agent orchestration"
+      ],
+      "product": [
+        "Product discovery",
+        "Roadmapping",
+        "User interviews",
+        "Metrics design",
+        "PRD writing",
+        "Sprint planning"
+      ]
+    },
+    "certifications": [
+      "Product Management — Great Learning",
+      "Cloud Computing Architecture — Great Learning",
+      "AWS Certified"
+    ]
+  },
+  "resume": {
+    "name": "Vaibhav Narula",
+    "subtitle": "Senior Software Engineer · AI PM in progress",
+    "contact": "hello@vaibhav.dev · linkedin.com/in/vaibhav · github.com/vaibhav",
+    "summary": "Senior full-stack engineer with 3+ years shipping .NET / React / Next.js products in production. Self-initiated builder of four AI tools. Certified in Product Management and Cloud Architecture. Actively transitioning into AI Product Management roles.",
+    "experience": [
+      {
+        "role": "Senior Software Engineer",
+        "company": "TODO: Current company",
+        "period": "2024 — Present",
+        "bullets": [
+          "Lead full-stack delivery across .NET Core services and React/Next.js frontends on Azure.",
+          "Drove adoption of AI-assisted workflows across the team, cutting typical ticket cycle time by ~30%.",
+          "Owned the tech-to-product handoff on 3 major features — from discovery through post-launch metrics."
+        ]
+      },
+      {
+        "role": "Software Engineer",
+        "company": "TODO: Previous company",
+        "period": "2022 — 2024",
+        "bullets": [
+          "Built and shipped MERN/MEAN features end-to-end for a B2B SaaS product.",
+          "Migrated a legacy monolith module to Azure Functions, cutting infra cost ~40%.",
+          "Mentored 2 junior engineers on React and clean-architecture patterns."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "AI LinkedIn Automator",
+        "description": "end-to-end content pipeline with human-in-the-loop approval."
+      },
+      {
+        "name": "Idea Curator",
+        "description": "pgvector-based second brain that surfaces ship-worthy ideas weekly."
+      },
+      {
+        "name": "Leads Finder",
+        "description": "natural-language ICP → enriched, ranked lead list overnight."
+      },
+      {
+        "name": "Agentic Workflow Summarizer",
+        "description": "narrative post-mortems for agent runs."
+      }
+    ],
+    "skills": {
+      "engineering": ".NET Core, C#, React, Next.js, TypeScript, Node.js, Azure, MongoDB, SQL",
+      "ai": "OpenAI API, LangGraph, n8n, Ollama, pgvector, prompt design, Agent orchestration",
+      "product": "Discovery, roadmapping, user interviews, PRDs, metrics design"
+    },
+    "certifications": [
+      "Product Management — Great Learning",
+      "Cloud Computing Architecture — Great Learning",
+      "AWS Certified",
+      "TODO: Bachelor's degree — Institution, year"
+    ]
+  },
+  "contact": {
+    "heading": {
+      "line1": "Let's make",
+      "line2gradient": "something ship."
+    },
+    "description": "Open to AI Product Management roles, interesting collaborations, and honest coffee chats about the messy middle of building AI products.",
+    "cards": {
+      "email": {
+        "label": "Email",
+        "value": "hello@vaibhav.dev",
+        "href": "mailto:hello@vaibhav.dev",
+        "color": "bg-tangerine"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "/in/vaibhav",
+        "href": "https://linkedin.com",
+        "color": "bg-cyan"
+      },
+      "github": {
+        "label": "GitHub",
+        "value": "@vaibhav",
+        "href": "https://github.com",
+        "color": "bg-lime"
+      },
+      "calendly": {
+        "label": "Book a call",
+        "value": "Calendly · 30 min",
+        "href": "#",
+        "color": "bg-hotpink"
+      }
+    }
+  },
+  "footer": {
+    "heading": "Building things.",
+    "headingGradient": "Let's build one together.",
+    "copyright": "© 2026 Vaibhav Narula. Built with too much coffee.",
+    "tagline": "Shipped from an asymmetric grid, on purpose."
+  },
+  "navLinks": [
+    {
+      "href": "/",
+      "label": "Home"
+    },
+    {
+      "href": "/projects",
+      "label": "Projects"
+    },
+    {
+      "href": "/about",
+      "label": "About"
+    },
+    {
+      "href": "/resume",
+      "label": "Resume"
+    },
+    {
+      "href": "/contact",
+      "label": "Contact"
+    }
+  ]
+}

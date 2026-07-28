@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { StatsBar } from '@/components/stats-bar';
@@ -6,8 +8,12 @@ import { ToolsGrid } from '@/components/tools-grid';
 import { CtaBanner } from '@/components/cta-banner';
 import { Sticker } from '@/components/sticker';
 import { SectionReveal } from '@/components/section-reveal';
+import { useContent } from '@/lib/content-context';
 
 export default function Home() {
+  const content = useContent();
+  const hero = content.hero || {};
+
   return (
     <>
       {/* Hero */}
@@ -17,7 +23,7 @@ export default function Home() {
 
         <div className='relative mx-auto max-w-6xl px-5 md:px-8 pt-16 md:pt-24 pb-20 md:pb-32'>
           <SectionReveal delay={0}>
-            <Sticker>✨ Available for AI PM roles · Q3 2026</Sticker>
+            <Sticker>{hero.sticker || '✨ Available for AI PM roles · Q3 2026'}</Sticker>
           </SectionReveal>
 
           <SectionReveal delay={100}>
@@ -25,40 +31,39 @@ export default function Home() {
               className='text-display mt-6 font-extrabold leading-[0.9] tracking-tight'
               style={{ fontSize: 'clamp(3rem, 10vw, 8rem)' }}
             >
-              Engineer who <br />
-              <span className='gradient-text-signature'>ships product,</span> <br />
-              not just <span className='italic font-[family-name:var(--font-serif)]'>code.</span>
+              {hero.heading?.line1 || 'Engineer who'} <br />
+              <span className='gradient-text-signature'>{hero.heading?.line2gradient || 'ships product,'}</span> <br />
+              {hero.heading?.line3 || 'not just'} <span className='italic font-[family-name:var(--font-serif)]'>{hero.heading?.line3italic || 'code.'}</span>
             </h1>
           </SectionReveal>
 
           <SectionReveal delay={200}>
-            <p className='mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground'>
-              I'm <span className='text-foreground font-semibold'>Vaibhav Narula</span> — a senior .NET / React
-              engineer with 3+ years of full-stack chops, quietly building an AI tools portfolio and pivoting into{' '}
-              <span className='text-foreground font-semibold'>AI Product Management.</span>
-            </p>
+            <p
+              className='mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground'
+              dangerouslySetInnerHTML={{ __html: hero.description || "I'm <strong>Vaibhav Narula</strong> — a senior .NET / React engineer with 3+ years of full-stack chops, quietly building an AI tools portfolio and pivoting into <strong>AI Product Management.</strong>" }}
+            />
           </SectionReveal>
 
           <SectionReveal delay={300}>
             <div className='mt-10 flex flex-wrap gap-3'>
               <Link
-                href='/projects'
+                href={hero.cta?.primary?.href || '/projects'}
                 className='group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3.5 font-semibold hover:opacity-90 transition'
               >
-                View case studies
+                {hero.cta?.primary?.label || 'View case studies'}
                 <ArrowRight size={18} className='group-hover:translate-x-1 transition-transform' />
               </Link>
               <Link
-                href='/resume'
+                href={hero.cta?.secondary?.href || '/resume'}
                 className='inline-flex items-center gap-2 rounded-full border-2 border-foreground px-6 py-3.5 font-semibold hover:bg-foreground hover:text-background transition'
               >
-                See the résumé
+                {hero.cta?.secondary?.label || 'See the résumé'}
               </Link>
               <Link
-                href='/contact'
+                href={hero.cta?.tertiary?.href || '/contact'}
                 className='inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-semibold hover:bg-muted transition'
               >
-                Say hi →
+                {hero.cta?.tertiary?.label || 'Say hi →'}
               </Link>
             </div>
           </SectionReveal>

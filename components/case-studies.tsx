@@ -1,10 +1,16 @@
+'use client';
+
 import Link from 'next/link';
-import { projects } from '@/lib/data';
+import { projects as defaultProjects } from '@/lib/data';
 import { ProjectCard } from './project-card';
 import { Sticker } from './sticker';
 import { SectionReveal } from './section-reveal';
+import { useContent } from '@/lib/content-context';
 
 export function CaseStudies() {
+  const content = useContent();
+  const projects = content.projects || defaultProjects;
+
   return (
     <section className='mx-auto max-w-6xl px-5 md:px-8'>
       <SectionReveal>
@@ -25,7 +31,7 @@ export function CaseStudies() {
       </SectionReveal>
 
       <div className='grid gap-6 md:grid-cols-2'>
-        {projects.map((project, i) => (
+        {projects.map((project: any, i: number) => (
           <SectionReveal key={project.slug} delay={i * 100}>
             <ProjectCard project={project} />
           </SectionReveal>

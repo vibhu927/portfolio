@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { CursorGlow } from '@/components/cursor-glow';
+import { ContentProvider } from '@/lib/content-context';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -32,12 +34,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
-          <div className='min-h-screen'>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          </div>
+        <ThemeProvider attribute='class' defaultTheme='light' disableTransitionOnChange>
+          <ContentProvider>
+            <CursorGlow />
+            <div className='min-h-screen'>
+              <Header />
+              <main>{children}</main>
+              <Footer />
+            </div>
+          </ContentProvider>
         </ThemeProvider>
       </body>
     </html>

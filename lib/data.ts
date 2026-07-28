@@ -1,12 +1,14 @@
 export interface Project {
   slug: string;
   emoji: string;
+  image: string;
   title: string;
   description: string;
   tags: string[];
   gradient: string;
   dotColor: string;
   category: string;
+  liveUrl: string;
 }
 
 export interface Tool {
@@ -31,42 +33,50 @@ export const projects: Project[] = [
   {
     slug: "ai-linkedin-automator",
     emoji: "🪄",
+    image: "",
     title: "AI LinkedIn Automator",
     description: "Turns raw ideas into a week of on-brand LinkedIn posts — scheduled and shipped on autopilot.",
     tags: ["Node.js", "OpenAI API", "n8n", "Next.js"],
     gradient: "from-violet to-hotpink",
     dotColor: "bg-violet",
     category: "AI Tools",
+    liveUrl: "",
   },
   {
     slug: "idea-curator",
     emoji: "💡",
+    image: "",
     title: "Idea Curator",
     description: "A second brain that clusters half-formed thoughts into ships-worthy product ideas.",
     tags: ["Next.js", "OpenAI embeddings", "Supabase", "pgvector"],
     gradient: "from-hotpink to-tangerine",
     dotColor: "bg-hotpink",
     category: "AI Tools",
+    liveUrl: "",
   },
   {
     slug: "leads-finder",
     emoji: "🎯",
+    image: "",
     title: "Leads Finder",
     description: "Describe your ideal customer in plain English — get a ranked, enriched list of real ones by morning.",
     tags: [".NET Core", "React", "Azure Functions", "OpenAI"],
     gradient: "from-tangerine to-hotpink",
     dotColor: "bg-tangerine",
     category: "AI Tools",
+    liveUrl: "",
   },
   {
     slug: "agentic-workflow-summarizer",
     emoji: "🧵",
+    image: "",
     title: "Agentic Workflow Summarizer",
     description: "An agent that watches your multi-step workflows and hands you a plain-English post-mortem.",
     tags: ["Python", "LangGraph", "Ollama", "Next.js"],
     gradient: "from-cyan to-indigo",
     dotColor: "bg-cyan",
     category: "Agents",
+    liveUrl: "",
   },
 ];
 

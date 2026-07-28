@@ -3,12 +3,15 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { navLinks } from '@/lib/data';
+import { navLinks as defaultNavLinks } from '@/lib/data';
+import { useContent } from '@/lib/content-context';
 import { Menu, X } from 'lucide-react';
 
 export function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const content = useContent();
+  const navLinks = content.navLinks || defaultNavLinks;
 
   return (
     <header className='sticky top-0 z-50 backdrop-blur-lg bg-background/70 border-b border-border/60'>
@@ -19,7 +22,7 @@ export function Header() {
         </Link>
 
         <ul className='hidden md:flex items-center gap-1'>
-          {navLinks.map((link) => (
+          {navLinks.map((link: any) => (
             <li key={link.href}>
               <Link
                 href={link.href}
@@ -42,7 +45,7 @@ export function Header() {
           href='/contact'
           className='hidden md:inline-flex items-center gap-2 rounded-full bg-foreground text-background px-4 py-2 text-sm font-semibold hover:opacity-90 transition'
         >
-          Let's talk →
+          Let&apos;s talk →
         </Link>
 
         <button
@@ -57,7 +60,7 @@ export function Header() {
       {mobileOpen && (
         <div className='md:hidden border-t border-border/60 bg-background/95 backdrop-blur-lg px-5 pb-4'>
           <ul className='flex flex-col gap-1 pt-3'>
-            {navLinks.map((link) => (
+            {navLinks.map((link: any) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
@@ -78,7 +81,7 @@ export function Header() {
             onClick={() => setMobileOpen(false)}
             className='mt-3 block text-center rounded-full bg-foreground text-background px-4 py-2 text-sm font-semibold hover:opacity-90 transition'
           >
-            Let's talk →
+            Let&apos;s talk →
           </Link>
         </div>
       )}

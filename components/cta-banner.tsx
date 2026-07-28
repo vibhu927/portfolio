@@ -1,25 +1,31 @@
+'use client';
+
 import Link from 'next/link';
 import { Mail } from 'lucide-react';
 import { SectionReveal } from './section-reveal';
+import { useContent } from '@/lib/content-context';
 
 export function CtaBanner() {
+  const content = useContent();
+  const cta = content.cta || {};
+
   return (
     <section className='mx-auto max-w-6xl px-5 md:px-8 mt-32'>
       <SectionReveal>
         <div className='rounded-[2rem] border-2 border-foreground overflow-hidden'>
           <div className='grain gradient-signature text-white p-10 md:p-16'>
             <h2 className='text-display font-extrabold leading-none' style={{ fontSize: 'clamp(2.5rem, 8vw, 6rem)' }}>
-              Hiring for AI PM?
+              {cta.heading || 'Hiring for AI PM?'}
             </h2>
             <p className='mt-4 max-w-xl text-white/90 text-lg'>
-              I'd rather chat than send another cold DM. Book a call, drop an email, or just say hi.
+              {cta.description || "I'd rather chat than send another cold DM. Book a call, drop an email, or just say hi."}
             </p>
             <div className='mt-8 flex flex-wrap gap-3'>
               <Link
                 href='/contact'
                 className='inline-flex items-center gap-2 rounded-full bg-white text-foreground px-6 py-3.5 font-semibold hover:opacity-90 transition'
               >
-                <Mail size={16} /> Get in touch
+                <Mail size={16} /> {cta.buttonLabel || 'Get in touch'}
               </Link>
               <a
                 href='https://linkedin.com'

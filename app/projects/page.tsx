@@ -1,20 +1,22 @@
 'use client';
 
 import { useState } from 'react';
-import { projects } from '@/lib/data';
+import { projects as defaultProjects } from '@/lib/data';
 import { ProjectCard } from '@/components/project-card';
 import { SectionReveal } from '@/components/section-reveal';
 import { Sticker } from '@/components/sticker';
-import Link from 'next/link';
+import { useContent } from '@/lib/content-context';
 
 const categories = ['All', 'AI Tools', 'Automation', 'Personal Branding', 'Productivity', 'GTM', 'Agents', 'Experiments'];
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const content = useContent();
+  const projects = content.projects || defaultProjects;
 
   const filtered = activeCategory === 'All'
     ? projects
-    : projects.filter((p) => p.category === activeCategory);
+    : projects.filter((p: any) => p.category === activeCategory);
 
   return (
     <section className='mx-auto max-w-6xl px-5 md:px-8 py-16 md:py-24'>
@@ -45,25 +47,12 @@ export default function ProjectsPage() {
       </div>
 
       <div className='mt-10 grid gap-6 md:grid-cols-2'>
-        {filtered.map((project, i) => (
+        {filtered.map((project: any, i: number) => (
           <SectionReveal key={project.slug} delay={i * 80}>
             <ProjectCard project={project} />
           </SectionReveal>
         ))}
       </div>
-
-      {/* <div className='mt-16 text-center'>
-        <p className='text-display text-2xl md:text-3xl font-bold'>
-          Building things.<br />
-          <span className='gradient-text-signature'>Let's build one together.</span>
-        </p>
-        <Link
-          href='/contact'
-          className='mt-6 inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 font-semibold hover:opacity-90 transition'
-        >
-          Start a conversation →
-        </Link>
-      </div> */}
     </section>
   );
 }

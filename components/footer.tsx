@@ -1,15 +1,21 @@
+'use client';
+
 import Link from 'next/link';
 import { Mail } from 'lucide-react';
+import { useContent } from '@/lib/content-context';
 
 export function Footer() {
+  const content = useContent();
+  const footer = content.footer || {};
+
   return (
     <footer className='mt-32 border-t border-border/60'>
       <div className='mx-auto max-w-6xl px-5 md:px-8 py-16'>
         <div className='grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]'>
           <div>
             <h3 className='text-display text-4xl md:text-5xl font-bold leading-none'>
-              Building things.<br />
-              <span className='gradient-text-signature'>Let's build one together.</span>
+              {footer.heading || 'Building things.'}<br />
+              <span className='gradient-text-signature'>{footer.headingGradient || "Let's build one together."}</span>
             </h3>
             <Link
               href='/contact'
@@ -56,8 +62,8 @@ export function Footer() {
         </div>
 
         <div className='mt-12 pt-6 border-t border-border/60 flex flex-wrap gap-3 items-center justify-between text-xs text-muted-foreground'>
-          <span>© 2026 Vaibhav Narula. Built with too much coffee.</span>
-          <span>Shipped from an asymmetric grid, on purpose.</span>
+          <span>{footer.copyright || '© 2026 Vaibhav Narula. Built with too much coffee.'}</span>
+          <span>{footer.tagline || 'Shipped from an asymmetric grid, on purpose.'}</span>
         </div>
       </div>
     </footer>
