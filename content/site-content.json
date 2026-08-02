@@ -46,7 +46,7 @@
   "projects": [
     {
       "slug": "beyond-os",
-      "emoji": "📅",
+      "emoji": "",
       "image": "/uploads/1785690305002-OS-YouTube-Thumbnail.png.png",
       "title": "Beyond OS",
       "description": "<li data-section-id=\"17c06s1\" data-start=\"488\" data-end=\"574\"><p data-start=\"149\" data-end=\"469\" class=\"PDq2pG_selectionAnchorContainer\">Designed and developed a centralized Business Operating System to streamline internal organizational operations. The platform unifies CRM, HRMS, project management, approvals, employee management, reporting, and administrative workflows into a single enterprise application with a configurable and scalable architecture.<br></p><h3 data-section-id=\"1me10u6\" data-start=\"471\" data-end=\"487\" class=\"\"></h3></li>",
@@ -58,7 +58,7 @@
       "gradient": "from-black to-black",
       "dotColor": "bg-violet",
       "category": "CRM",
-      "liveUrl": "",
+      "liveUrl": "https://beyondos-landing.lovable.app",
       "problem": "<ul><li></li></ul><ul><li data-section-id=\"17c06s1\" data-start=\"488\" data-end=\"574\"></li><ol><ul><li>1. Business operations were spread across multiple disconnected tools and spreadsheets.</li><li>2. Manual approvals and repetitive administrative tasks reduced productivity.</li><li>3. Limited visibility into teams, projects, and operational performance.</li><li>4. Scaling the application for multiple organizations required repeated customization.</li></ul></ol><li><br></li></ul><h3 data-section-id=\"ff5o6q\" data-start=\"811\" data-end=\"832\"></h3>",
       "keyDecisions": "<ul data-start=\"833\" data-end=\"1259\"><li data-section-id=\"livhfe\" data-start=\"833\" data-end=\"904\">1. Adopted a modular architecture to allow independent business modules.</li><li data-section-id=\"1wkib1u\" data-start=\"905\" data-end=\"982\">2. Implemented Role-Based Access Control (RBAC) for granular user permissions.</li><li data-section-id=\"tr2w4j\" data-start=\"983\" data-end=\"1059\">3. Built configurable workflows, approval systems, and organization settings.</li><li data-section-id=\"1yi5fpe\" data-start=\"1060\" data-end=\"1150\">4. Designed an API-first architecture to support web, mobile, and third-party integrations.</li><li data-section-id=\"7q9kvo\" data-start=\"1151\" data-end=\"1259\">5. Developed reusable components and centralized configurations to simplify maintenance and future expansion.\n</li></ul>\n<h3 data-section-id=\"flp4bj\" data-start=\"1261\" data-end=\"1277\"></h3>",
       "outcome": "<ul><li>1. Consolidated multiple business functions into a single platform.</li><li>2. Reduced operational overhead through workflow automation and centralized management.</li><li>3. Improved scalability by enabling rapid onboarding of new organizations with minimal configuration.</li><li>4. Established a reusable enterprise platform capable of supporting future modules such as AI assistants, analytics, and advanced automation.</li></ul>"

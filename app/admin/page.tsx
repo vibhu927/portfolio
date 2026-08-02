@@ -8,6 +8,9 @@ interface SiteContent {
 }
 
 export default function AdminPage() {
+  const [authenticated, setAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [passwordError, setPasswordError] = useState(false);
   const [content, setContent] = useState<SiteContent>({});
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -15,11 +18,57 @@ export default function AdminPage() {
   const [uploadingImage, setUploadingImage] = useState<string | null>(null);
 
   useEffect(() => {
+    if (sessionStorage.getItem('admin_auth') === '1') {
+      setAuthenticated(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!authenticated) return;
     fetch('/api/content')
       .then((res) => res.json())
       .then(setContent)
       .catch(() => {});
-  }, []);
+  }, [authenticated]);
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === 'vaibhav2026') {
+      sessionStorage.setItem('admin_auth', '1');
+      setAuthenticated(true);
+    } else {
+      setPasswordError(true);
+      setPassword('');
+    }
+  };
+
+  if (!authenticated) {
+    return (
+      <section className='mx-auto max-w-sm px-5 pt-24'>
+        <h1 className='text-display text-3xl font-extrabold text-center'>Admin</h1>
+        <form onSubmit={handleLogin} className='mt-8 space-y-4'>
+          <div>
+            <label className='text-xs font-bold uppercase tracking-widest text-muted-foreground'>Password</label>
+            <input
+              type='password'
+              value={password}
+              onChange={(e) => { setPassword(e.target.value); setPasswordError(false); }}
+              className='mt-2 w-full rounded-2xl border-2 border-border bg-background px-4 py-3 focus:border-foreground focus:outline-none transition'
+              placeholder='Enter password'
+              autoFocus
+            />
+            {passwordError && <p className='mt-1 text-sm text-red-500'>Incorrect password</p>}
+          </div>
+          <button
+            type='submit'
+            className='w-full rounded-full bg-foreground text-background px-6 py-3 font-semibold hover:opacity-90'
+          >
+            Enter
+          </button>
+        </form>
+      </section>
+    );
+  }
 
   const updateField = (path: (string | number)[], value: any) => {
     setContent((prev) => {
@@ -104,6 +153,12 @@ export default function AdminPage() {
         <div className='flex items-center gap-3'>
           {saved && <span className='text-sm text-green-600 font-semibold'>Saved!</span>}
           <a href='/' className='text-sm text-muted-foreground hover:text-foreground'>← Back to site</a>
+          <button
+            onClick={() => { sessionStorage.removeItem('admin_auth'); setAuthenticated(false); }}
+            className='text-sm text-muted-foreground hover:text-foreground'
+          >
+            Logout
+          </button>
           <button
             onClick={save}
             disabled={saving}
@@ -313,7 +368,7 @@ export default function AdminPage() {
           <TextArea label='Description' value={content.contact.description} onChange={(v) => updateField(['contact', 'description'], v)} rows={2} />
 
           <p className='text-xs font-bold uppercase tracking-widest text-muted-foreground mt-6 mb-2'>Cards</p>
-          {['email', 'linkedin', 'github', 'calendly'].map((key) => (
+          {['email', 'linkedin', 'github', 'phone'].map((key) => (
             <div key={key} className='rounded-2xl border-2 border-border p-4 mb-3 space-y-2'>
               <span className='font-bold capitalize'>{key}</span>
               <Field label='Label' value={content.contact.cards[key].label} onChange={(v) => updateField(['contact', 'cards', key, 'label'], v)} />
