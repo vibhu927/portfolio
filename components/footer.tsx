@@ -53,7 +53,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href='mailto:hello@vaibhav.dev' className='inline-flex items-center gap-2 hover:text-foreground text-muted-foreground'>
+                <a href='mailto:vbnarula78@gmail.com' className='inline-flex items-center gap-2 hover:text-foreground text-muted-foreground'>
                   <Mail size={14} /> Email
                 </a>
               </li>
@@ -63,7 +63,7 @@ export function Footer() {
 
         <div className='mt-12 pt-6 border-t border-border/60 flex flex-wrap gap-3 items-center justify-between text-xs text-muted-foreground'>
           <span>{footer.copyright || '© 2026 Vaibhav Narula. Built with too much coffee.'}</span>
-          <span>{footer.tagline || 'Shipped from an asymmetric grid, on purpose.'}</span>
+
         </div>
       </div>
     </footer>

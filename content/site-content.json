@@ -45,116 +45,122 @@
   },
   "projects": [
     {
-      "slug": "ai-linkedin-automator",
-      "emoji": "🪄",
-      "image": "",
-      "title": "AI LinkedIn Automator",
-      "description": "Automated ideas posting as per your need on LinkedIn — scheduled and shipped on autopilot.",
+      "slug": "beyond-os",
+      "emoji": "📅",
+      "image": "/uploads/1785690305002-OS-YouTube-Thumbnail.png.png",
+      "title": "Beyond OS",
+      "description": "<li data-section-id=\"17c06s1\" data-start=\"488\" data-end=\"574\"><p data-start=\"149\" data-end=\"469\" class=\"PDq2pG_selectionAnchorContainer\">Designed and developed a centralized Business Operating System to streamline internal organizational operations. The platform unifies CRM, HRMS, project management, approvals, employee management, reporting, and administrative workflows into a single enterprise application with a configurable and scalable architecture.<br></p><h3 data-section-id=\"1me10u6\" data-start=\"471\" data-end=\"487\" class=\"\"></h3></li>",
       "tags": [
-        "Google-AI-Studio",
-        "Opencode"
+        "NextJS",
+        "PostgresSQL",
+        "MetaOAuth"
       ],
-      "gradient": "from-violet to-hotpink",
+      "gradient": "from-black to-black",
       "dotColor": "bg-violet",
-      "category": "AI Tools",
+      "category": "CRM",
       "liveUrl": "",
-      "problem": "This project was born from a personal pain point — a gap in the market that no existing tool addressed well enough.",
-      "keyDecisions": "The stack was chosen to build it super fast through the new Google AI Studio using Gemini API keys.",
-      "outcome": "Shipped end-to-end, self-initiated, and fully documented. A proper case study from problem to outcome."
+      "problem": "<ul><li></li></ul><ul><li data-section-id=\"17c06s1\" data-start=\"488\" data-end=\"574\"></li><ol><ul><li>1. Business operations were spread across multiple disconnected tools and spreadsheets.</li><li>2. Manual approvals and repetitive administrative tasks reduced productivity.</li><li>3. Limited visibility into teams, projects, and operational performance.</li><li>4. Scaling the application for multiple organizations required repeated customization.</li></ul></ol><li><br></li></ul><h3 data-section-id=\"ff5o6q\" data-start=\"811\" data-end=\"832\"></h3>",
+      "keyDecisions": "<ul data-start=\"833\" data-end=\"1259\"><li data-section-id=\"livhfe\" data-start=\"833\" data-end=\"904\">1. Adopted a modular architecture to allow independent business modules.</li><li data-section-id=\"1wkib1u\" data-start=\"905\" data-end=\"982\">2. Implemented Role-Based Access Control (RBAC) for granular user permissions.</li><li data-section-id=\"tr2w4j\" data-start=\"983\" data-end=\"1059\">3. Built configurable workflows, approval systems, and organization settings.</li><li data-section-id=\"1yi5fpe\" data-start=\"1060\" data-end=\"1150\">4. Designed an API-first architecture to support web, mobile, and third-party integrations.</li><li data-section-id=\"7q9kvo\" data-start=\"1151\" data-end=\"1259\">5. Developed reusable components and centralized configurations to simplify maintenance and future expansion.\n</li></ul>\n<h3 data-section-id=\"flp4bj\" data-start=\"1261\" data-end=\"1277\"></h3>",
+      "outcome": "<ul><li>1. Consolidated multiple business functions into a single platform.</li><li>2. Reduced operational overhead through workflow automation and centralized management.</li><li>3. Improved scalability by enabling rapid onboarding of new organizations with minimal configuration.</li><li>4. Established a reusable enterprise platform capable of supporting future modules such as AI assistants, analytics, and advanced automation.</li></ul>"
     },
     {
       "slug": "beyond-content",
-      "emoji": "💡",
-      "image": "",
+      "emoji": "",
+      "image": "/uploads/1785689195055-YouTube-Thumbnail-Design.png.png",
       "title": "Beyond C",
-      "description": "Beyond C is a creator collaboration platform that connects brands, creators, and agencies to build impactful campaigns.",
+      "description": "<div class=\"qMYqUG_convSearchResultHighlightRoot\"><div class=\"\" data-turn-id-container=\"request-6a68f40d-ad60-83ee-bd84-6d26a2f8023b-3\" data-is-intersecting=\"true\"><section class=\"text-token-text-primary w-full focus:outline-none has-data-writing-block:pointer-events-none [&amp;:has([data-writing-block])&gt;*]:pointer-events-auto R6Vx5W_threadScrollVars scroll-mb-[calc(var(--scroll-root-safe-area-inset-bottom,0px)+var(--thread-response-height))] scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]\" dir=\"auto\" data-turn-id=\"request-6a68f40d-ad60-83ee-bd84-6d26a2f8023b-3\" data-turn-id-container=\"request-6a68f40d-ad60-83ee-bd84-6d26a2f8023b-3\" data-testid=\"conversation-turn-12\" data-turn=\"assistant\"><div class=\"text-base my-auto mx-auto pb-8 [--thread-content-margin:var(--thread-content-margin-xs,calc(var(--spacing)*4))] @w-sm/main:[--thread-content-margin:var(--thread-content-margin-sm,calc(var(--spacing)*6))] @w-lg/main:[--thread-content-margin:var(--thread-content-margin-lg,calc(var(--spacing)*16))] px-(--thread-content-margin)\"><div data-conversation-screenshot-content=\"\" class=\"[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn\"><div class=\"flex max-w-full flex-col gap-4 grow\"><div data-message-author-role=\"assistant\" data-message-id=\"4953d96a-5ca5-4b98-80dc-cb6506692f43\" dir=\"auto\" data-message-model-slug=\"gpt-5-5\" class=\"min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal outline-none keyboard-focused:focus-ring [.text-message+&amp;]:mt-1\" data-turn-start-message=\"true\" tabindex=\"0\"><div class=\"flex w-full flex-col gap-1 empty:hidden\"><div class=\"markdown prose dark:prose-invert wrap-break-word w-full dark markdown-new-styling\"><p data-start=\"740\" data-end=\"1064\" data-is-last-node=\"\" data-is-only-node=\"\" class=\"PDq2pG_selectionAnchorContainer\"><strong data-start=\"740\" data-end=\"1064\" data-is-last-node=\"\">Beyond C is a creator marketplace and campaign management platform designed to solve fragmented influencer marketing workflows. It centralizes creator discovery, communication, campaign tracking, and analytics, enabling brands, creators, and agencies to collaborate more efficiently and achieve better campaign outcomes.</strong><span aria-hidden=\"true\" class=\"PDq2pG_selectionAnchor\"></span></p></div></div></div></div><div class=\"z-0 flex min-h-[46px] justify-start\"></div><div class=\"mt-3 w-full empty:hidden\"><div class=\"text-center\"></div></div></div><div data-conversation-screenshot-content=\"\" class=\"[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1\"><div></div></div></div></section></div></div><div aria-hidden=\"true\" class=\"pointer-events-none -mt-px h-px translate-y-(--scroll-root-safe-area-inset-bottom)\"></div>",
       "tags": [
         "Next.js",
         "Supabase",
         "PostgresSQL",
         "Meta-OAuth"
       ],
-      "gradient": "from-hotpink to-tangerine",
+      "gradient": "from-black to-black",
       "dotColor": "bg-hotpink",
       "category": "Social Media Marketplace",
-      "liveUrl": "",
-      "problem": "Brands struggle to discover the right creators and manage influencer campaigns efficiently across fragmented tools.",
-      "keyDecisions": "Built a unified platform that brings brands, creators, and agencies together with integrated campaign management, messaging, and analytics.",
-      "outcome": "Streamlined creator discovery and campaign execution, reducing operational complexity while improving collaboration and campaign ROI."
+      "liveUrl": "https://beyond-c.vercel.app",
+      "problem": "<ul data-start=\"17\" data-end=\"665\"><ol><li>1. Brands struggled to discover creators that matched their target audience and campaign goals.</li><li>2. Campaign communication was scattered across WhatsApp, email, spreadsheets, and social media DMs.</li><li>3. Managing campaigns manually led to missed deadlines, poor coordination, and limited visibility.</li><li>4. Small creators found it difficult to gain exposure and secure brand collaborations.</li><li>5. Agencies had no centralized workspace to manage multiple clients, creators, and campaigns.</li><li>6. There was no transparent way to measure campaign performance or creator effectiveness.</li><li>7. Brands lacked a single platform to manage the complete influencer marketing lifecycle</li></ol></ul>",
+      "keyDecisions": "<ul data-start=\"694\" data-end=\"1379\"><li data-section-id=\"ghoj3b\" data-start=\"694\" data-end=\"795\">1. Built an all in one SaaS platform connecting brands, creators, and agencies in a unified ecosystem.</li><li data-section-id=\"1cmw14z\" data-start=\"796\" data-end=\"884\">2. Designed dedicated dashboards and workflows for each user role to simplify operations.</li><li data-section-id=\"znvqxh\" data-start=\"885\" data-end=\"987\">3. Implemented advanced creator discovery using categories, audience insights, and performance metrics.</li><li data-section-id=\"1rjztxd\" data-start=\"988\" data-end=\"1084\">4. Integrated real time messaging, campaign management, and collaboration into a single platform.</li><li data-section-id=\"bgqupi\" data-start=\"1085\" data-end=\"1191\">5. Added campaign milestones, digital agreements, and analytics to improve transparency and accountability.</li><li data-section-id=\"10j23dt\" data-start=\"1192\" data-end=\"1287\">6. Focused on scalable architecture to support future AI powered recommendations and automation.</li><li data-section-id=\"6u8wbm\" data-start=\"1288\" data-end=\"1379\">7. Prioritized an intuitive user experience to reduce onboarding time and increase adoption\n</li></ul>\n",
+      "outcome": "<li data-section-id=\"gldxsy\" data-start=\"1403\" data-end=\"1501\">Centralized campaign management into a single platform, eliminating the need for multiple tools.</li><li data-section-id=\"1bmhr8r\" data-start=\"1502\" data-end=\"1584\">Improved collaboration and communication between brands, creators, and agencies.</li><li data-section-id=\"jheox4\" data-start=\"1585\" data-end=\"1667\">Reduced manual effort and administrative overhead through streamlined workflow.</li><li data-section-id=\"1t2kxj0\" data-start=\"1668\" data-end=\"1747\">Enabled faster creator discovery and more relevant partnership opportunities.</li><li data-section-id=\"h223je\" data-start=\"1748\" data-end=\"1845\">Increased campaign transparency with real time tracking, milestones, and performance analytics.</li><li data-section-id=\"1ij7yp5\" data-start=\"1846\" data-end=\"1941\">Created a scalable foundation for AI driven campaign recommendations and workflow automation.</li><li data-section-id=\"1r47lf9\" data-start=\"1942\" data-end=\"2037\" data-is-last-node=\"\">Delivered a more efficient, data driven influencer marketing experience for all stakeholders.</li>"
     },
     {
-      "slug": "leads-finder",
-      "emoji": "🎯",
-      "image": "",
-      "title": "Leads Finder",
-      "description": "Describe your ideal customer in plain English — get a ranked, enriched list of real ones by morning.",
+      "slug": "linkedin-automator",
+      "emoji": "",
+      "image": "/uploads/1785691277314-ChatGPT-Image-Aug-2-2026-from-Beyond-C-1.png.png",
+      "title": "Linkedin Automator",
+      "description": "An AI-powered platform that automates LinkedIn content creation, scheduling, and publishing while helping individuals and businesses maintain a consistent online presence with minimal manual effort.",
       "tags": [
-        ".NET Core",
-        "React",
-        "Azure Functions",
-        "OpenAI"
+        "ReactJS",
+        "Gemini",
+        "LinkedinAPI"
       ],
-      "gradient": "from-tangerine to-hotpink",
+      "gradient": "from-white to-blue",
       "dotColor": "bg-tangerine",
-      "category": "AI Tools",
+      "category": "AI Tools, Productivity, Automation",
       "liveUrl": "",
-      "problem": "This project was born from a personal pain point — a gap in the market that no existing tool addressed well enough.",
-      "keyDecisions": "The stack was chosen for speed and reliability: .NET Core, React, Azure Functions, OpenAI. Each choice was driven by what would ship fastest without compromising on quality.",
-      "outcome": "Shipped end-to-end, self-initiated, and fully documented. A proper case study from problem to outcome."
+      "problem": "<li data-section-id=\"dwtdu2\" data-start=\"422\" data-end=\"485\">Maintaining a consistent LinkedIn presence is time-consuming.</li><li data-section-id=\"18wlfgy\" data-start=\"486\" data-end=\"549\">Users struggle to come up with engaging post ideas regularly.</li><li data-section-id=\"16slew7\" data-start=\"550\" data-end=\"618\">Creating high-quality content requires significant writing effort.</li><li data-section-id=\"1n2dde5\" data-start=\"619\" data-end=\"681\">Managing multiple LinkedIn accounts manually is inefficient.</li><li data-section-id=\"9plyt7\" data-start=\"682\" data-end=\"751\">Businesses lack analytics to understand what content performs best.</li><li data-section-id=\"1a4vtb\" data-start=\"752\" data-end=\"813\">Scheduling posts across different time zones is cumbersome.</li><li data-section-id=\"1c4iqu9\" data-start=\"814\" data-end=\"886\">Teams have no centralized workflow for content planning and approvals.</li>",
+      "keyDecisions": "<li data-section-id=\"tbgt0l\" data-start=\"910\" data-end=\"986\">Integrated AI to generate high-quality LinkedIn posts from simple prompts.</li><li data-section-id=\"so9l24\" data-start=\"987\" data-end=\"1055\">Built a content calendar with automated scheduling and publishing.</li><li data-section-id=\"12zs76q\" data-start=\"1056\" data-end=\"1126\">Added post templates and tone customization for different audiences.</li><li data-section-id=\"2si9z2\" data-start=\"1127\" data-end=\"1201\">Implemented analytics to measure engagement and optimize future content.</li><li data-section-id=\"1e3chzu\" data-start=\"1202\" data-end=\"1277\">Designed a centralized dashboard for managing multiple LinkedIn accounts.</li><li data-section-id=\"1qftdwy\" data-start=\"1278\" data-end=\"1351\">Enabled collaboration features for teams to review and approve content.</li><li data-section-id=\"nkyz3a\" data-start=\"1352\" data-end=\"1432\">Focused on reducing manual effort while maintaining authentic content quality.</li>",
+      "outcome": "<ul data-start=\"1451\" data-end=\"1936\"><li data-section-id=\"1n0jc1x\" data-start=\"1451\" data-end=\"1518\">1. Reduced the time required to create and publish LinkedIn content.</li><li data-section-id=\"1y0bffw\" data-start=\"1519\" data-end=\"1574\">2. Improved posting consistency and audience engagement.</li><li data-section-id=\"n7vq9k\" data-start=\"1575\" data-end=\"1646\">3. Simplified content planning through an intuitive scheduling workflow.</li><li data-section-id=\"111w278\" data-start=\"1647\" data-end=\"1720\">4. Enabled businesses to scale personal branding across multiple profiles.</li><li data-section-id=\"ph05tb\" data-start=\"1721\" data-end=\"1796\">5. Increased productivity by automating repetitive content management tasks.</li><li data-section-id=\"cn6hwl\" data-start=\"1797\" data-end=\"1858\">6. Provided actionable insights through performance analytics.</li><li data-section-id=\"1nq2kgo\" data-start=\"1859\" data-end=\"1936\">7. Created a scalable solution for individuals, agencies, and marketing teams.<br></li></ul><h1 data-section-id=\"1n6al56\" data-start=\"1943\" data-end=\"1970\"></h1>"
     },
     {
-      "slug": "agentic-workflow-summarizer",
-      "emoji": "🧵",
-      "image": "",
-      "title": "Agentic Workflow Summarizer",
-      "description": "An agent that watches your multi-step workflows and hands you a plain-English post-mortem.",
+      "slug": "email-automation",
+      "emoji": "",
+      "image": "/uploads/1785691297806-ChatGPT-Image-Aug-2-2026-from-Beyond-C.png.png",
+      "title": "Email Automation Platform",
+      "description": "An AI-powered email automation platform that helps businesses generate personalized emails, automate follow-ups, and manage outreach campaigns to improve lead generation and customer engagement.",
       "tags": [
         "Python",
-        "LangGraph",
-        "Ollama",
-        "Next.js"
+        "Automations"
       ],
-      "gradient": "from-cyan to-indigo",
+      "gradient": "from-white to-white",
       "dotColor": "bg-cyan",
-      "category": "Agents",
+      "category": "Agents, Automation, AI, Email",
       "liveUrl": "",
-      "problem": "This project was born from a personal pain point — a gap in the market that no existing tool addressed well enough.",
-      "keyDecisions": "The stack was chosen for speed and reliability: Python, LangGraph, Ollama, Next.js. Each choice was driven by what would ship fastest without compromising on quality.",
-      "outcome": "Shipped end-to-end, self-initiated, and fully documented. A proper case study from problem to outcome."
+      "problem": "<li data-section-id=\"qbuzke\" data-start=\"2205\" data-end=\"2266\">Sales teams spend excessive time writing repetitive emails.</li><li data-section-id=\"r6col3\" data-start=\"2267\" data-end=\"2347\">Manual follow-ups lead to missed opportunities and inconsistent communication.</li><li data-section-id=\"1pcp62r\" data-start=\"2348\" data-end=\"2395\">Personalizing outreach at scale is difficult.\n</li><li data-section-id=\"of4cqr\" data-start=\"2396\" data-end=\"2457\">Businesses lack visibility into email campaign performance.</li><li data-section-id=\"1o3oc3x\" data-start=\"2458\" data-end=\"2524\">Managing large outreach campaigns manually reduces productivity.</li><li data-section-id=\"1513h5g\" data-start=\"2525\" data-end=\"2578\">Inconsistent messaging affects brand communication.</li><li data-section-id=\"fswwik\" data-start=\"2579\" data-end=\"2635\">Tracking conversations across prospects is fragmented.</li>",
+      "keyDecisions": "<ul data-start=\"2659\" data-end=\"3162\"><li data-section-id=\"f96p0q\" data-start=\"2659\" data-end=\"2740\">1. Leveraged AI to generate personalized email content based on recipient context.</li><li data-section-id=\"qudpyf\" data-start=\"2741\" data-end=\"2813\">2. Built automated email sequences with customizable follow-up workflows.</li><li data-section-id=\"ukgrwn\" data-start=\"2814\" data-end=\"2885\">3. Added campaign management with scheduling and recipient segmentation.</li><li data-section-id=\"16v1zh3\" data-start=\"2886\" data-end=\"2963\">4. Integrated analytics for open rates, reply rates, and campaign performance.</li><li data-section-id=\"1u3mpk0\" data-start=\"2964\" data-end=\"3035\">5. Designed reusable email templates to ensure consistent communication.</li><li data-section-id=\"1n27x33\" data-start=\"3036\" data-end=\"3094\">6. Implemented centralized contact and campaign management.</li><li data-section-id=\"xs04b8\" data-start=\"3095\" data-end=\"3162\">7. Focused on scalability to support high-volume outreach campaigns.<br></li></ul><h3 data-section-id=\"flp4bj\" data-start=\"3164\" data-end=\"3180\"></h3>",
+      "outcome": "<ul data-start=\"3181\" data-end=\"3633\"><li data-section-id=\"1e2jgac\" data-start=\"3181\" data-end=\"3238\">1. Significantly reduced the time spent on email outreach.</li><li data-section-id=\"he0q32\" data-start=\"3239\" data-end=\"3306\">2. Improved response rates through personalized AI-generated emails.</li><li data-section-id=\"jvr7x2\" data-start=\"3307\" data-end=\"3370\">3. Increased lead engagement with automated follow-up sequences.</li><li data-section-id=\"bjczjj\" data-start=\"3371\" data-end=\"3428\">4. Streamlined campaign management from a single platform.</li><li data-section-id=\"1vln3vx\" data-start=\"3429\" data-end=\"3487\">5. Enhanced visibility through detailed campaign analytics.</li><li data-section-id=\"1nj0rd0\" data-start=\"3488\" data-end=\"3556\">6. Improved team productivity by eliminating repetitive manual tasks.</li><li data-section-id=\"1r2mtje\" data-start=\"3557\" data-end=\"3633\">7. Enabled businesses to execute scalable and data-driven outreach campaigns.<br></li></ul><p data-start=\"3635\" data-end=\"3775\" data-is-last-node=\"\" data-is-only-node=\"\"></p>"
     }
   ],
   "tools": [
     {
       "name": "NotebookLM",
-      "description": "Long-form research synthesis"
+      "description": "Long-form research synthesis",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20'/><path d='M8 7h6'/><path d='M8 11h8'/></svg>"
     },
     {
       "name": "Claude Code",
-      "description": "Pair-programmer of choice"
+      "description": "Pair-programmer of choice",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='16 18 22 12 16 6'/><polyline points='8 6 2 12 8 18'/></svg>"
     },
     {
       "name": "n8n",
-      "description": "Glue for every workflow I ship"
+      "description": "Glue for every workflow I ship",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='2'/><path d='M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14'/></svg>"
     },
     {
-      "name": "ComfyUI",
-      "description": "Visual pipelines that don't lie"
+      "name": "Cursor",
+      "description": "Superfast prototyping",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m18 15-6-6-6 6'/></svg>"
     },
     {
       "name": "Leonardo AI",
-      "description": "Fast concept art"
+      "description": "Fast concept art",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2' ry='2'/><circle cx='9' cy='9' r='2'/><path d='m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21'/></svg>"
     },
     {
       "name": "HeyGen",
-      "description": "Video without a studio"
+      "description": "Video without a studio",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5'/><rect x='2' y='6' width='14' height='12' rx='2'/></svg>"
     },
     {
       "name": "ElevenLabs",
-      "description": "Voice that actually feels"
+      "description": "Voice that actually feels",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z'/><path d='M19 10v2a7 7 0 0 1-14 0v-2'/><line x1='12' x2='12' y1='19' y2='22'/></svg>"
     },
     {
       "name": "Ollama",
-      "description": "Local-first, private-by-default"
+      "description": "Local-first, private-by-default",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10'/></svg>"
     }
   ],
   "cta": {
@@ -249,7 +255,7 @@
   "resume": {
     "name": "Vaibhav Narula",
     "subtitle": "Senior Software Engineer · AI PM in progress",
-    "contact": "hello@vaibhav.dev · linkedin.com/in/vaibhav · github.com/vaibhav",
+    "contact": "vbnarula78@gmail.com · linkedin.com/in/vaibhavnarula47 · github.com/vibhu927",
     "summary": "Senior full-stack engineer with 3+ years shipping .NET / React / Next.js products in production. Self-initiated builder of four AI tools. Certified in Product Management and Cloud Architecture. Actively transitioning into AI Product Management roles.",
     "experience": [
       {
@@ -312,26 +318,26 @@
     "cards": {
       "email": {
         "label": "Email",
-        "value": "hello@vaibhav.dev",
-        "href": "mailto:hello@vaibhav.dev",
+        "value": "vbnarula78@gmail.com",
+        "href": "mailto:vbnarula78@gmail.com",
         "color": "bg-tangerine"
       },
       "linkedin": {
         "label": "LinkedIn",
-        "value": "/in/vaibhav",
-        "href": "https://linkedin.com",
+        "value": "/in/vaibhavnarula47",
+        "href": "https://linkedin.com/in/vaibhavnarula47",
         "color": "bg-cyan"
       },
       "github": {
         "label": "GitHub",
-        "value": "@vaibhav",
-        "href": "https://github.com",
+        "value": "@vibhu927",
+        "href": "https://github.com/vibhu927",
         "color": "bg-lime"
       },
-      "calendly": {
-        "label": "Book a call",
-        "value": "Calendly · 30 min",
-        "href": "#",
+      "phone": {
+        "label": "Phone",
+        "value": "+91 7206142042",
+        "href": "tel:+917206142042",
         "color": "bg-hotpink"
       }
     }

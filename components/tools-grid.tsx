@@ -22,6 +22,12 @@ export function ToolsGrid() {
         {tools.map((tool: any, i: number) => (
           <SectionReveal key={tool.name} delay={i * 60}>
             <div className='h-full rounded-2xl border-2 border-foreground bg-card p-5 card-tilt'>
+              {tool.icon && (
+                <div
+                  className='w-8 h-8 text-foreground mb-3'
+                  dangerouslySetInnerHTML={{ __html: tool.icon }}
+                />
+              )}
               <p className='text-display text-lg font-bold'>{tool.name}</p>
               <p className='mt-1 text-sm text-muted-foreground'>{tool.description}</p>
             </div>

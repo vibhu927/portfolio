@@ -46,7 +46,7 @@ export default function ProjectsPage() {
         ))}
       </div>
 
-      <div className='mt-10 grid gap-6 md:grid-cols-2'>
+      <div className='mt-10 grid gap-6 md:grid-cols-2 [grid-auto-rows:1fr]'>
         {filtered.map((project: any, i: number) => (
           <SectionReveal key={project.slug} delay={i * 80}>
             <ProjectCard project={project} />

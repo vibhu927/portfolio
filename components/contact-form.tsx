@@ -1,16 +1,16 @@
 'use client';
 
-import { Mail, Calendar, Send } from 'lucide-react';
+import { Mail, Phone, Send } from 'lucide-react';
 import { useContent } from '@/lib/content-context';
 
 export function ContactForm() {
   const content = useContent();
   const cards = content.contact?.cards || {};
 
-  const emailCard = cards.email || { label: 'Email', value: 'hello@vaibhav.dev', href: 'mailto:hello@vaibhav.dev', color: 'bg-tangerine' };
+  const emailCard = cards.email || { label: 'Email', value: 'vbnarula78@gmail.com', href: 'mailto:vbnarula78@gmail.com', color: 'bg-tangerine' };
   const linkedinCard = cards.linkedin || { label: 'LinkedIn', value: '/in/vaibhav', href: 'https://linkedin.com', color: 'bg-cyan' };
   const githubCard = cards.github || { label: 'GitHub', value: '@vaibhav', href: 'https://github.com', color: 'bg-lime' };
-  const calendlyCard = cards.calendly || { label: 'Book a call', value: 'Calendly · 30 min', href: '#', color: 'bg-hotpink' };
+  const phoneCard = cards.phone || { label: 'Phone', value: '+91 7206142042', href: 'tel:+917206142042', color: 'bg-hotpink' };
 
   return (
     <div className='grid gap-8 md:grid-cols-[1.4fr_1fr]'>
@@ -97,15 +97,15 @@ export function ContactForm() {
           </div>
         </a>
         <a
-          href={calendlyCard.href}
-          className={`flex items-center gap-4 rounded-3xl border-2 border-foreground p-5 card-tilt ${calendlyCard.color} text-white`}
+          href={phoneCard.href}
+          className={`flex items-center gap-4 rounded-3xl border-2 border-foreground p-5 card-tilt ${phoneCard.color} text-white`}
         >
           <span className='h-11 w-11 rounded-2xl bg-cream border-2 border-foreground grid place-items-center text-foreground shrink-0'>
-            <Calendar size={24} />
+            <Phone size={24} />
           </span>
           <div>
-            <p className='text-xs font-bold uppercase tracking-widest opacity-80'>{calendlyCard.label}</p>
-            <p className='text-display text-lg font-bold'>{calendlyCard.value}</p>
+            <p className='text-xs font-bold uppercase tracking-widest opacity-80'>{phoneCard.label}</p>
+            <p className='text-display text-lg font-bold'>{phoneCard.value}</p>
           </div>
         </a>
       </div>

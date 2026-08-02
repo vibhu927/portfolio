@@ -7,6 +7,7 @@ import { Sticker } from '@/components/sticker';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { useContent } from '@/lib/content-context';
 import { useParams } from 'next/navigation';
+import { SectionReveal } from '@/components/section-reveal';
 
 export default function ProjectDetail() {
   const params = useParams();
@@ -29,7 +30,7 @@ export default function ProjectDetail() {
       <div className={`relative aspect-[16/5] rounded-3xl overflow-hidden bg-gradient-to-br ${project.gradient} grain mb-10`}>
         <div className='absolute inset-0 flex items-center justify-center'>
           {project.image ? (
-            <img src={project.image} alt={project.title} className='max-h-full max-w-full object-contain' />
+            <img src={project.image} alt={project.title} className='max-h-[70%] max-w-[70%] object-contain' />
           ) : (
             <span className='text-[12rem] md:text-[16rem] leading-none drop-shadow-xl'>{project.emoji}</span>
           )}
@@ -42,7 +43,10 @@ export default function ProjectDetail() {
         <h1 className='text-display mt-6 font-extrabold' style={{ fontSize: 'clamp(2.5rem, 7vw, 5rem)' }}>
           {project.title}
         </h1>
-        <p className='mt-4 text-lg text-muted-foreground leading-relaxed'>{project.description}</p>
+        <div
+          className='mt-4 text-lg text-muted-foreground leading-relaxed'
+          dangerouslySetInnerHTML={{ __html: project.description || '<p>No description added yet.</p>' }}
+        />
         <div className='mt-6 flex flex-wrap gap-2'>
           {project.tags?.map((tag: string) => (
             <span key={tag} className='text-sm px-3 py-1.5 rounded-full border-2 border-foreground bg-card font-medium'>
@@ -62,25 +66,42 @@ export default function ProjectDetail() {
         )}
       </div>
 
-      <div className='mt-16 space-y-16 max-w-3xl'>
-        <div>
-          <h2 className='text-display text-2xl font-bold mb-4'>The Problem</h2>
-          <p className='text-muted-foreground leading-relaxed'>
-            {project.problem || 'This project was born from a personal pain point — a gap in the market that no existing tool addressed well enough.'}
-          </p>
-        </div>
-        <div>
-          <h2 className='text-display text-2xl font-bold mb-4'>Key Decisions</h2>
-          <p className='text-muted-foreground leading-relaxed'>
-            {project.keyDecisions || `The stack was chosen for speed and reliability: ${project.tags?.join(', ')}. Each choice was driven by what would ship fastest without compromising on quality.`}
-          </p>
-        </div>
-        <div>
-          <h2 className='text-display text-2xl font-bold mb-4'>Outcome</h2>
-          <p className='text-muted-foreground leading-relaxed'>
-            {project.outcome || 'Shipped end-to-end, self-initiated, and fully documented. A proper case study from problem to outcome.'}
-          </p>
-        </div>
+      <div className='mt-16 max-w-3xl'>
+        <SectionReveal>
+          <div className='relative mb-20'>
+            <span className='absolute -top-10 -left-6 text-[6.5rem] font-bold text-muted/90 leading-none select-none pointer-events-none'>01</span>
+            <h2 className='text-display text-sm font-semibold uppercase tracking-widest mb-3 relative'>The Problem</h2>
+            <hr className='border-border mb-6' />
+            <div
+              className='text-muted-foreground leading-relaxed text-base'
+              dangerouslySetInnerHTML={{ __html: project.problem || '<p>This project was born from a personal pain point — a gap in the market that no existing tool addressed well enough.</p>' }}
+            />
+          </div>
+        </SectionReveal>
+
+        <SectionReveal delay={100}>
+          <div className='relative mb-20'>
+            <span className='absolute -top-10 -left-6 text-[6.5rem] font-bold text-muted/90 leading-none select-none pointer-events-none'>02</span>
+            <h2 className='text-display text-sm font-semibold uppercase tracking-widest mb-3 relative'>Key Decisions</h2>
+            <hr className='border-border mb-6' />
+            <div
+              className='text-muted-foreground leading-relaxed text-base'
+              dangerouslySetInnerHTML={{ __html: project.keyDecisions || `<p>The stack was chosen for speed and reliability: ${project.tags?.join(', ')}. Each choice was driven by what would ship fastest without compromising on quality.</p>` }}
+            />
+          </div>
+        </SectionReveal>
+
+        <SectionReveal delay={200}>
+          <div className='relative'>
+            <span className='absolute -top-10 -left-6 text-[6.5rem] font-bold text-muted/90 leading-none select-none pointer-events-none'>03</span>
+            <h2 className='text-display text-sm font-semibold uppercase tracking-widest mb-3 relative'>Outcome</h2>
+            <hr className='border-border mb-6' />
+            <div
+              className='text-muted-foreground leading-relaxed text-base'
+              dangerouslySetInnerHTML={{ __html: project.outcome || '<p>Shipped end-to-end, self-initiated, and fully documented. A proper case study from problem to outcome.</p>' }}
+            />
+          </div>
+        </SectionReveal>
       </div>
     </section>
   );

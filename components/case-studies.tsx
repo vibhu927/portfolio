@@ -30,7 +30,7 @@ export function CaseStudies() {
         </div>
       </SectionReveal>
 
-      <div className='grid gap-6 md:grid-cols-2'>
+      <div className='grid gap-6 md:grid-cols-2 [grid-auto-rows:1fr]'>
         {projects.map((project: any, i: number) => (
           <SectionReveal key={project.slug} delay={i * 100}>
             <ProjectCard project={project} />

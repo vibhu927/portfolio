@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Save, Plus, Trash2, ChevronDown, ChevronRight } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Save, Plus, Trash2, ChevronDown, ChevronRight, Upload, Bold, Italic, Underline, List, ListOrdered, Heading2, Quote } from 'lucide-react';
 
 interface SiteContent {
   [key: string]: any;
@@ -12,6 +12,7 @@ export default function AdminPage() {
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
+  const [uploadingImage, setUploadingImage] = useState<string | null>(null);
 
   useEffect(() => {
     fetch('/api/content')
@@ -68,6 +69,32 @@ export default function AdminPage() {
     setOpenSections((prev) => ({ ...prev, [section]: !prev[section] }));
   };
 
+  const uploadProjectImage = async (projectIndex: number, file: File | null) => {
+    if (!file) return;
+
+    setUploadingImage(`project-${projectIndex}`);
+    const formData = new FormData();
+    formData.append('image', file);
+
+    try {
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Upload failed');
+      }
+
+      updateField(['projects', projectIndex, 'image'], data.url);
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Upload failed');
+    } finally {
+      setUploadingImage(null);
+    }
+  };
+
   if (!content.hero) return <div className='p-10 text-lg'>Loading...</div>;
 
   return (
@@ -119,17 +146,35 @@ export default function AdminPage() {
                 <button onClick={() => removeFromArray(['projects'], i)} className='text-red-500 hover:text-red-700'><Trash2 size={14} /></button>
               </div>
               <Field label='Emoji' value={p.emoji} onChange={(v) => updateField(['projects', i, 'emoji'], v)} />
-              <Field label='Image URL (optional, overrides emoji)' value={p.image || ''} onChange={(v) => updateField(['projects', i, 'image'], v)} />
+              <div className='space-y-2'>
+                <Field
+                  label='Image URL (optional)'
+                  value={p.image || ''}
+                  onChange={(v) => updateField(['projects', i, 'image'], v)}
+                  type='url'
+                  placeholder='https://example.com/image.jpg'
+                />
+                <label className='flex items-center gap-2 text-sm font-medium text-muted-foreground cursor-pointer'>
+                  <Upload size={14} />
+                  <span>{uploadingImage === `project-${i}` ? 'Uploading...' : 'Upload image from computer'}</span>
+                  <input
+                    type='file'
+                    accept='image/*'
+                    className='hidden'
+                    onChange={(e) => uploadProjectImage(i, e.target.files?.[0] || null)}
+                  />
+                </label>
+              </div>
               <Field label='Title' value={p.title} onChange={(v) => updateField(['projects', i, 'title'], v)} />
               <Field label='Slug' value={p.slug} onChange={(v) => updateField(['projects', i, 'slug'], v)} />
-              <Field label='Description' value={p.description} onChange={(v) => updateField(['projects', i, 'description'], v)} />
+              <RichTextEditor label='Description' value={p.description || ''} onChange={(v) => updateField(['projects', i, 'description'], v)} />
               <Field label='Category' value={p.category} onChange={(v) => updateField(['projects', i, 'category'], v)} />
               <Field label='Live URL (leave empty if not live)' value={p.liveUrl || ''} onChange={(v) => updateField(['projects', i, 'liveUrl'], v)} />
               <Field label='Tags (comma-separated)' value={p.tags.join(', ')} onChange={(v) => updateField(['projects', i, 'tags'], v.split(',').map((s: string) => s.trim()))} />
               <Field label='Gradient' value={p.gradient} onChange={(v) => updateField(['projects', i, 'gradient'], v)} />
-              <TextArea label='Problem' value={p.problem} onChange={(v) => updateField(['projects', i, 'problem'], v)} rows={2} />
-              <TextArea label='Key Decisions' value={p.keyDecisions} onChange={(v) => updateField(['projects', i, 'keyDecisions'], v)} rows={2} />
-              <TextArea label='Outcome' value={p.outcome} onChange={(v) => updateField(['projects', i, 'outcome'], v)} rows={2} />
+              <RichTextEditor label='Problem' value={p.problem || ''} onChange={(v) => updateField(['projects', i, 'problem'], v)} />
+              <RichTextEditor label='Key Decisions' value={p.keyDecisions || ''} onChange={(v) => updateField(['projects', i, 'keyDecisions'], v)} />
+              <RichTextEditor label='Outcome' value={p.outcome || ''} onChange={(v) => updateField(['projects', i, 'outcome'], v)} />
             </div>
           ))}
           <button
@@ -143,13 +188,14 @@ export default function AdminPage() {
         <Section title='Tools' isOpen={openSections.tools} onToggle={() => toggle('tools')}>
           {content.tools.map((t: any, i: number) => (
             <div key={i} className='flex items-center gap-3 mb-2'>
-              <Field label='' value={t.name} onChange={(v) => updateField(['tools', i, 'name'], v)} />
-              <Field label='' value={t.description} onChange={(v) => updateField(['tools', i, 'description'], v)} />
+              <Field label='Name' value={t.name} onChange={(v) => updateField(['tools', i, 'name'], v)} />
+              <Field label='Description' value={t.description} onChange={(v) => updateField(['tools', i, 'description'], v)} />
+              <Field label='Icon (SVG)' value={t.icon || ''} onChange={(v) => updateField(['tools', i, 'icon'], v)} />
               <button onClick={() => removeFromArray(['tools'], i)} className='text-red-500 hover:text-red-700 mt-5'><Trash2 size={14} /></button>
             </div>
           ))}
           <button
-            onClick={() => addToArray(['tools'], { name: '', description: '' })}
+            onClick={() => addToArray(['tools'], { name: '', description: '', icon: '' })}
             className='inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground'
           >
             <Plus size={14} /> Add tool
@@ -315,6 +361,201 @@ export default function AdminPage() {
   );
 }
 
+function RichTextEditor({ label, value, onChange, placeholder = '' }: { label: string; value: string; onChange: (v: string) => void; placeholder?: string }) {
+  const editorRef = useRef<HTMLDivElement>(null);
+  const savedRange = useRef<Range | null>(null);
+
+  useEffect(() => {
+    if (editorRef.current && document.activeElement !== editorRef.current && editorRef.current.innerHTML !== (value || '')) {
+      editorRef.current.innerHTML = value || '';
+    }
+  }, [value]);
+
+  const saveSelection = () => {
+    const selection = window.getSelection();
+    if (selection && selection.rangeCount > 0) {
+      savedRange.current = selection.getRangeAt(0).cloneRange();
+    }
+  };
+
+  const restoreSelection = () => {
+    if (savedRange.current) {
+      const selection = window.getSelection();
+      if (selection) {
+        selection.removeAllRanges();
+        selection.addRange(savedRange.current);
+      }
+    }
+  };
+
+  const replaceBlockWith = (node: Node) => {
+    const selection = window.getSelection();
+    if (!selection || selection.rangeCount === 0) return;
+
+    const range = selection.getRangeAt(0);
+    const BLOCK = 'P|DIV|H[1-6]|BLOCKQUOTE|LI';
+
+    const startContainer = range.startContainer;
+    const startOffset = range.startOffset;
+    const endContainer = range.endContainer;
+    const endOffset = range.endOffset;
+
+    const findBlockAncestor = (n: Node): HTMLElement | null => {
+      let el = n.nodeType === Node.TEXT_NODE ? n.parentElement : (n as HTMLElement);
+      while (el && el !== editorRef.current) {
+        if (el.tagName && el.tagName.match(BLOCK)) return el;
+        el = el.parentElement;
+      }
+      return null;
+    };
+
+    const startBlock = findBlockAncestor(startContainer);
+    const endBlock = findBlockAncestor(endContainer);
+
+    if (!startBlock || !endBlock) {
+      range.deleteContents();
+      range.insertNode(node);
+      return;
+    }
+
+    const parent = startBlock.parentElement!;
+    const nextSibling = endBlock.nextSibling;
+
+    parent.insertBefore(node, startBlock);
+
+    let current: Node | null = startBlock;
+    while (current && current !== nextSibling) {
+      const nxt: Node | null = current.nextSibling;
+      if (current !== node) parent.removeChild(current);
+      current = nxt;
+    }
+  };
+
+  const applyCommand = (command: string, valueArg?: string) => {
+    const editor = editorRef.current;
+    if (!editor) return;
+
+    const selection = window.getSelection();
+    if (!selection) return;
+
+    const listCommands = ['insertUnorderedList', 'insertOrderedList'];
+    if (listCommands.includes(command)) {
+      const listTag = command === 'insertUnorderedList' ? 'ul' : 'ol';
+
+      restoreSelection();
+
+      if (!selection.rangeCount || selection.isCollapsed) {
+        const list = document.createElement(listTag);
+        const item = document.createElement('li');
+        item.textContent = 'List item';
+        list.appendChild(item);
+
+        editor.focus();
+
+        const sel = window.getSelection();
+        if (sel && sel.rangeCount > 0) {
+          const range = sel.getRangeAt(0);
+          replaceBlockWith(list);
+        } else {
+          editor.appendChild(list);
+        }
+
+        const newRange = document.createRange();
+        newRange.selectNodeContents(item);
+        newRange.collapse(false);
+        const sel2 = window.getSelection();
+        sel2?.removeAllRanges();
+        sel2?.addRange(newRange);
+
+        onChange(editor.innerHTML);
+        return;
+      }
+
+      const selectedText = selection.toString();
+      const lines = selectedText.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+
+      editor.focus();
+      restoreSelection();
+
+      const list = document.createElement(listTag);
+      lines.forEach((line) => {
+        const item = document.createElement('li');
+        item.textContent = line;
+        list.appendChild(item);
+      });
+
+      replaceBlockWith(list);
+
+      const newRange = document.createRange();
+      newRange.selectNodeContents(list.querySelector('li') || list);
+      newRange.collapse(false);
+      const sel = window.getSelection();
+      sel?.removeAllRanges();
+      sel?.addRange(newRange);
+
+      onChange(editor.innerHTML);
+      return;
+    }
+
+    editor.focus();
+    restoreSelection();
+    document.execCommand(command, false, valueArg);
+    onChange(editor.innerHTML);
+  };
+
+  const handleMouseDown = () => {
+    saveSelection();
+  };
+
+  const handleInput = () => {
+    onChange(editorRef.current?.innerHTML || '');
+  };
+
+  return (
+    <div>
+      {label && <label className='text-xs font-bold uppercase tracking-widest text-muted-foreground'>{label}</label>}
+      <div className='mt-1 rounded-xl border-2 border-border bg-background p-2'>
+        <div className='mb-2 flex flex-wrap gap-2'>
+          <ToolbarButton icon={<Bold size={14} />} title='Bold' onMouseDown={handleMouseDown} onClick={() => applyCommand('bold')} />
+          <ToolbarButton icon={<Italic size={14} />} title='Italic' onMouseDown={handleMouseDown} onClick={() => applyCommand('italic')} />
+          <ToolbarButton icon={<Underline size={14} />} title='Underline' onMouseDown={handleMouseDown} onClick={() => applyCommand('underline')} />
+          <ToolbarButton icon={<Heading2 size={14} />} title='Heading' onMouseDown={handleMouseDown} onClick={() => applyCommand('formatBlock', 'h3')} />
+          <ToolbarButton icon={<List size={14} />} title='Bullet list' onMouseDown={handleMouseDown} onClick={() => applyCommand('insertUnorderedList')} />
+          <ToolbarButton icon={<ListOrdered size={14} />} title='Numbered list' onMouseDown={handleMouseDown} onClick={() => applyCommand('insertOrderedList')} />
+          <ToolbarButton icon={<Quote size={14} />} title='Quote' onMouseDown={handleMouseDown} onClick={() => applyCommand('formatBlock', 'blockquote')} />
+        </div>
+        <div
+          ref={editorRef}
+          contentEditable
+          suppressContentEditableWarning
+          onInput={handleInput}
+          data-placeholder={placeholder}
+          className='min-h-[120px] w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground focus:outline-none'
+          style={{ whiteSpace: 'pre-wrap' }}
+        />
+        <p className='mt-2 text-[11px] uppercase tracking-widest text-muted-foreground'>Rich text formatting will appear on the live project page.</p>
+      </div>
+    </div>
+  );
+}
+
+function ToolbarButton({ icon, title, onMouseDown, onClick }: { icon: React.ReactNode; title: string; onMouseDown?: () => void; onClick: () => void }) {
+  return (
+    <button
+      type='button'
+      onMouseDown={(e) => {
+        e.preventDefault();
+        onMouseDown?.();
+      }}
+      onClick={onClick}
+      className='rounded-lg border border-border bg-card px-2.5 py-2 text-muted-foreground hover:border-foreground hover:text-foreground transition'
+      title={title}
+    >
+      {icon}
+    </button>
+  );
+}
+
 function Section({ title, isOpen, onToggle, children }: { title: string; isOpen?: boolean; onToggle: () => void; children: React.ReactNode }) {
   return (
     <div className='rounded-3xl border-2 border-foreground bg-card overflow-hidden'>
@@ -330,14 +571,15 @@ function Section({ title, isOpen, onToggle, children }: { title: string; isOpen?
   );
 }
 
-function Field({ label, value, onChange }: { label: string; value: string; onChange: (v: string) => void }) {
+function Field({ label, value, onChange, type = 'text', placeholder = '' }: { label: string; value: string; onChange: (v: string) => void; type?: string; placeholder?: string }) {
   return (
     <div>
       {label && <label className='text-xs font-bold uppercase tracking-widest text-muted-foreground'>{label}</label>}
       <input
-        type='text'
+        type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
         className='mt-1 w-full rounded-xl border-2 border-border bg-background px-4 py-2.5 focus:border-foreground focus:outline-none transition text-sm'
       />
     </div>
