@@ -312,7 +312,7 @@ export default function AdminPage() {
         <Section title='About — Toolbelt' isOpen={openSections.aboutToolbelt} onToggle={() => toggle('aboutToolbelt')}>
           <Field label='Engineering (comma-separated)' value={content.about.toolbelt.engineering.join(', ')} onChange={(v) => updateField(['about', 'toolbelt', 'engineering'], v.split(',').map((s: string) => s.trim()))} />
           <Field label='AI & Automation (comma-separated)' value={content.about.toolbelt.ai.join(', ')} onChange={(v) => updateField(['about', 'toolbelt', 'ai'], v.split(',').map((s: string) => s.trim()))} />
-          <Field label='Product & Craft (comma-separated)' value={content.about.toolbelt.product.join(', ')} onChange={(v) => updateField(['about', 'toolbelt', 'product'], v.split(',').map((s: string) => s.trim()))} />
+          <Field label='Product & Craft (comma-separated)' value={content.about.toolbelt['product thinking'].join(', ')} onChange={(v) => updateField(['about', 'toolbelt', 'product thinking'], v.split(',').map((s: string) => s.trim()))} />
         </Section>
 
         <Section title='About — Certifications' isOpen={openSections.aboutCerts} onToggle={() => toggle('aboutCerts')}>

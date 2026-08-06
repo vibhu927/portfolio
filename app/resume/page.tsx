@@ -104,7 +104,7 @@ export default function ResumePage() {
                 <strong>AI &amp; automation:</strong> {resume.skills?.ai || 'OpenAI API, LangGraph, n8n, Ollama, pgvector, prompt design, Agent orchestration'}
               </p>
               <p>
-                <strong>Product:</strong> {resume.skills?.product || 'Discovery, roadmapping, user interviews, PRDs, metrics design'}
+                <strong>Product:</strong> {resume.skills?.['product thinking'] || 'Discovery, roadmapping, user interviews, PRDs, metrics design'}
               </p>
             </div>
           </section>

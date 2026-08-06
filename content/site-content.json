@@ -1,13 +1,13 @@
 {
   "hero": {
-    "sticker": "✨ Available for AI PM roles",
+    "sticker": "✨ Building AI products end-to-end",
     "heading": {
       "line1": "Engineer who",
       "line2gradient": "ships product,",
       "line3": "not just",
       "line3italic": "code."
     },
-    "description": "I'm <strong>Vaibhav Narula</strong> — a senior .NET / React engineer with 3+ years of full-stack chops, quietly building an AI tools portfolio and pivoting into <strong>AI Product Management.</strong>",
+    "description": "I'm <strong>Vaibhav Narula</strong> — a senior .NET / React engineer with 3+ years of full-stack chops, quietly building an AI tools portfolio, pairing full-stack execution with the discovery, scoping, and sequencing that turns ideas into shipped products.",
     "cta": {
       "primary": {
         "label": "View case studies",
@@ -24,7 +24,7 @@
     }
   },
   "stats": {
-    "currently": "Shipping AI tools while I earn the PM stripes.",
+    "currently": "Shipping AI tools while growing into the product decisions behind them.",
     "stat1": {
       "value": "3+",
       "label": "years shipping full-stack"
@@ -164,7 +164,7 @@
     }
   ],
   "cta": {
-    "heading": "Hiring for AI PM?",
+    "heading": "Hiring a product-minded builder?",
     "description": "I'd rather chat than send another cold DM. Book a call, drop an email, or just say hi.",
     "buttonLabel": "Get in touch"
   },
@@ -177,7 +177,7 @@
     "bio": [
       "I'm Vaibhav — senior software engineer with 3+ years of full-stack experience across the .NET and JavaScript worlds. I've spent most of that time in the enterprise trenches, shipping React and Next.js frontends onto .NET Core and Azure backends, and picking up MERN/MEAN work along the way.",
       "Somewhere in the last 18 months, my curiosity outgrew the ticket queue. I started building AI tools for myself on nights and weekends — four of them, so far — and each one taught me that the hard part was never the code. It was scoping, sequencing, and knowing what <em>not</em> to build.",
-      "That's the muscle I want to grow next. I'm pivoting into <strong>AI Product Management</strong> — not because engineering bored me, but because the most interesting decisions in AI products live one layer up: what to build, for whom, with what tradeoffs, at what pace. I want to be in that room."
+      "That's the muscle I want to grow next. I'm spending more time where the code meets the user — not because engineering bored me, but because the most interesting decisions in AI products live one layer up: what to build, for whom, with what tradeoffs, at what pace. That's the room I'm earning a seat in."
     ],
     "timeline": [
       {
@@ -210,8 +210,8 @@
       },
       {
         "year": "2026",
-        "title": "Making the pivot official",
-        "description": "Actively pursuing AI Product Management roles. I want to sit where engineering context, AI intuition, and product judgment overlap — because that's where the interesting decisions get made.",
+        "title": "Betting on product-led engineering",
+        "description": "Widening my lane from 'how to build' to 'what to build, for whom, and why now' — where engineering context, AI intuition, and product judgment overlap. It's where the interesting decisions get made.",
         "colorClass": "bg-lime",
         "dotClass": "bg-lime"
       }
@@ -237,7 +237,7 @@
         "Prompt design",
         "Agent orchestration"
       ],
-      "product": [
+      "product thinking": [
         "Product discovery",
         "Roadmapping",
         "User interviews",
@@ -254,9 +254,9 @@
   },
   "resume": {
     "name": "Vaibhav Narula",
-    "subtitle": "Senior Software Engineer · AI PM in progress",
+    "subtitle": "Senior Software Engineer · Product-minded builder",
     "contact": "vbnarula78@gmail.com · linkedin.com/in/vaibhavnarula47 · github.com/vibhu927",
-    "summary": "Senior full-stack engineer with 3+ years shipping .NET / React / Next.js products in production. Self-initiated builder of four AI tools. Certified in Product Management and Cloud Architecture. Actively transitioning into AI Product Management roles.",
+    "summary": "Senior full-stack engineer with 3+ years shipping .NET / React / Next.js products in production. Self-initiated builder of four AI tools. Certified in Product Management and Cloud Architecture. I pair a builder's bias for shipping with the discovery and scoping judgment that makes products worth building.",
     "experience": [
       {
         "role": "Senior Software Engineer",
@@ -300,7 +300,7 @@
     "skills": {
       "engineering": ".NET Core, C#, React, Next.js, TypeScript, Node.js, Azure, MongoDB, SQL",
       "ai": "OpenAI API, LangGraph, n8n, Ollama, pgvector, prompt design, Agent orchestration",
-      "product": "Discovery, roadmapping, user interviews, PRDs, metrics design"
+      "product thinking": "Discovery, roadmapping, user interviews, PRDs, metrics design"
     },
     "certifications": [
       "Product Management — Great Learning",
@@ -314,7 +314,7 @@
       "line1": "Let's make",
       "line2gradient": "something ship."
     },
-    "description": "Open to AI Product Management roles, interesting collaborations, and honest coffee chats about the messy middle of building AI products.",
+    "description": "Open to product-led engineering opportunities, interesting collaborations, and honest coffee chats about the messy middle of building AI products.",
     "cards": {
       "email": {
         "label": "Email",

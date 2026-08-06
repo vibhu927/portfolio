@@ -105,7 +105,7 @@ export default function AboutPage() {
             <div className='rounded-3xl border-2 border-foreground p-6 bg-card h-full'>
               <p className='text-xs font-bold uppercase tracking-widest text-muted-foreground'>Product &amp; Craft</p>
               <div className='mt-4 flex flex-wrap gap-2'>
-                {(toolbelt.product || ['Product discovery', 'Roadmapping', 'User interviews', 'Metrics design', 'PRD writing', 'Sprint planning']).map((skill: string) => (
+                {(toolbelt['product thinking'] || ['Product discovery', 'Roadmapping', 'User interviews', 'Metrics design', 'PRD writing', 'Sprint planning']).map((skill: string) => (
                   <span key={skill} className='text-sm px-3 py-1.5 rounded-full bg-muted font-medium'>
                     {skill}
                   </span>
