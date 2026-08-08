@@ -3,6 +3,7 @@ import { ThemeProvider } from 'next-themes';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { CursorGlow } from '@/components/cursor-glow';
+import { FloatingShapes } from '@/components/floating-shapes';
 import { ContentProvider } from '@/lib/content-context';
 import './globals.css';
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute='class' defaultTheme='light' disableTransitionOnChange>
           <ContentProvider>
             <CursorGlow />
+            <FloatingShapes />
             <div className='min-h-screen'>
               <Header />
               <main>{children}</main>

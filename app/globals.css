@@ -117,6 +117,9 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
+  html, body {
+    overflow-x: clip;
+  }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
@@ -163,6 +166,78 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* Animated shimmer on the signature gradient text */
+@utility gradient-text-signature-animate {
+  background-image: linear-gradient(110deg, var(--violet), var(--hotpink) 30%, var(--tangerine) 55%, var(--hotpink) 75%, var(--violet));
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 6s ease-in-out infinite;
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Infinite horizontal marquee */
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@utility animate-marquee {
+  animation: marquee-x var(--marquee-duration, 28s) linear infinite;
+}
+
+/* Slow float for decorative shapes */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(var(--rotate, 0deg)); }
+  50% { transform: translateY(-16px) rotate(calc(var(--rotate, 0deg) + 8deg)); }
+}
+@utility animate-float-slow {
+  animation: float-slow 9s ease-in-out infinite;
+  animation-delay: var(--float-delay, 0s);
+}
+
+/* Cursor-following spotlight glow */
+.spotlight {
+  position: relative;
+}
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    300px circle at var(--mx, 50%) var(--my, 50%),
+    color-mix(in oklab, var(--violet) 16%, transparent),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Smooth scroll for anchor jumps */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-float-slow,
+  .gradient-text-signature-animate {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 @utility card-tilt {

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { navLinks as defaultNavLinks } from '@/lib/data';
 import { useContent } from '@/lib/content-context';
 import { Menu, X } from 'lucide-react';
@@ -10,12 +10,39 @@ import { Menu, X } from 'lucide-react';
 export function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
   const content = useContent();
   const navLinks = content.navLinks || defaultNavLinks;
 
+  useEffect(() => {
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || window.scrollY;
+      const height = doc.scrollHeight - doc.clientHeight;
+      setScrolled(scrollTop > 12);
+      setProgress(height > 0 ? (scrollTop / height) * 100 : 0);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <header className='sticky top-0 z-50 backdrop-blur-lg bg-background/70 border-b border-border/60'>
-      <nav className='mx-auto max-w-6xl px-5 md:px-8 h-16 flex items-center justify-between'>
+    <header
+      className={`sticky top-0 z-50 backdrop-blur-lg bg-background/70 border-b border-border/60 transition-all duration-300 ${
+        scrolled ? 'shadow-lg shadow-foreground/5' : ''
+      }`}
+    >
+      {/* Scroll progress */}
+      <div className='absolute top-0 left-0 right-0 h-[3px]'>
+        <div
+          className='h-full gradient-signature transition-[width] duration-100 ease-out'
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+
+      <nav className={`mx-auto max-w-6xl px-5 md:px-8 flex items-center justify-between transition-all duration-300 ${scrolled ? 'h-14' : 'h-16'}`}>
         <Link href='/' className='flex items-center gap-2 group'>
           <span className='h-8 w-8 rounded-xl gradient-signature grain shadow-md group-hover:rotate-6 transition-transform' />
           <span className='text-display text-lg font-bold'>vaibhav.</span>

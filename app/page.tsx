@@ -8,7 +8,32 @@ import { ToolsGrid } from '@/components/tools-grid';
 import { CtaBanner } from '@/components/cta-banner';
 import { Sticker } from '@/components/sticker';
 import { SectionReveal } from '@/components/section-reveal';
+import { Marquee } from '@/components/marquee';
 import { useContent } from '@/lib/content-context';
+
+const TICKER = [
+  'React',
+  'Next.js',
+  '.NET Core',
+  'AI Agents',
+  'n8n',
+  'TypeScript',
+  'Product Discovery',
+  'Azure',
+  'Prompt Design',
+  'Ollama',
+  'Claude Code',
+  'Roadmapping',
+];
+
+const ATTITUDE = [
+  'Shipping beats perfect',
+  'Idea → shipped → written up',
+  'Scoped before stunning',
+  'Metrics over vibes',
+  'Fail fast, run post-mortems',
+  'Demo-ready every Friday',
+];
 
 export default function Home() {
   const content = useContent();
@@ -20,9 +45,9 @@ export default function Home() {
       <section className='relative overflow-hidden'>
         <div aria-hidden='true' className='pointer-events-none absolute -top-24 -left-24 h-[420px] w-[420px] rounded-full gradient-signature opacity-40 blur-3xl' />
         <div aria-hidden='true' className='pointer-events-none absolute top-40 -right-24 h-[360px] w-[360px] rounded-full gradient-cool opacity-35 blur-3xl' />
+        <div className='mx-auto max-w-6xl px-5 md:px-8 pt-16 md:pt-24 pb-20 md:pb-32'>
 
-        <div className='relative mx-auto max-w-6xl px-5 md:px-8 pt-16 md:pt-24 pb-20 md:pb-32'>
-          <SectionReveal delay={0}>
+          <SectionReveal delay={0} className='relative z-10'>
             <Sticker>{hero.sticker || '✨ Available for AI PM roles · Q3 2026'}</Sticker>
           </SectionReveal>
 
@@ -32,7 +57,7 @@ export default function Home() {
               style={{ fontSize: 'clamp(3rem, 10vw, 8rem)' }}
             >
               {hero.heading?.line1 || 'Engineer who'} <br />
-              <span className='gradient-text-signature'>{hero.heading?.line2gradient || 'ships product,'}</span> <br />
+              <span className='gradient-text-signature-animate'>{hero.heading?.line2gradient || 'ships product,'}</span> <br />
               {hero.heading?.line3 || 'not just'} <span className='italic font-[family-name:var(--font-serif)]'>{hero.heading?.line3italic || 'code.'}</span>
             </h1>
           </SectionReveal>
@@ -74,7 +99,10 @@ export default function Home() {
         </div>
       </section>
 
+      <Marquee items={TICKER} rotated className='mt-4 md:mt-5 mb-10 md:mb-14 bg-card' />
+
       <CaseStudies />
+      <Marquee items={ATTITUDE} duration={24} rotated className='mt-24 md:mt-32 mb-2 md:mb-3 bg-foreground text-background' />
       <ToolsGrid />
       <CtaBanner />
     </>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { Project } from '@/lib/data';
+import { Spotlight } from './spotlight';
 
 function stripHtml(html: string): string {
   return html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
@@ -12,7 +13,8 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Link href={`/projects/${project.slug}`} className='group relative flex flex-col h-full rounded-3xl overflow-hidden border-2 border-foreground/90 bg-card card-tilt'>
+    <Spotlight className='h-full rounded-3xl'>
+      <Link href={`/projects/${project.slug}`} className='group relative flex flex-col h-full rounded-3xl overflow-hidden border-2 border-foreground/90 bg-card card-tilt'>
       <div className={`relative aspect-[16/10] bg-gradient-to-br ${project.gradient} grain overflow-hidden`}>
         <div className='absolute inset-0 flex items-center justify-center'>
           {project.image ? (
@@ -41,5 +43,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
     </Link>
+    </Spotlight>
   );
 }

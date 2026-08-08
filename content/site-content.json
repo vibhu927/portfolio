@@ -73,7 +73,8 @@
         "Next.js",
         "Supabase",
         "PostgresSQL",
-        "Meta-OAuth"
+        "Meta-OAuth",
+        "Flutter"
       ],
       "gradient": "from-black to-black",
       "dotColor": "bg-hotpink",
@@ -97,7 +98,7 @@
       "gradient": "from-white to-blue",
       "dotColor": "bg-tangerine",
       "category": "AI Tools, Productivity, Automation",
-      "liveUrl": "",
+      "liveUrl": "https://linkedin-automation-hub-1039482335306.asia-southeast1.run.app",
       "problem": "<li data-section-id=\"dwtdu2\" data-start=\"422\" data-end=\"485\">Maintaining a consistent LinkedIn presence is time-consuming.</li><li data-section-id=\"18wlfgy\" data-start=\"486\" data-end=\"549\">Users struggle to come up with engaging post ideas regularly.</li><li data-section-id=\"16slew7\" data-start=\"550\" data-end=\"618\">Creating high-quality content requires significant writing effort.</li><li data-section-id=\"1n2dde5\" data-start=\"619\" data-end=\"681\">Managing multiple LinkedIn accounts manually is inefficient.</li><li data-section-id=\"9plyt7\" data-start=\"682\" data-end=\"751\">Businesses lack analytics to understand what content performs best.</li><li data-section-id=\"1a4vtb\" data-start=\"752\" data-end=\"813\">Scheduling posts across different time zones is cumbersome.</li><li data-section-id=\"1c4iqu9\" data-start=\"814\" data-end=\"886\">Teams have no centralized workflow for content planning and approvals.</li>",
       "keyDecisions": "<li data-section-id=\"tbgt0l\" data-start=\"910\" data-end=\"986\">Integrated AI to generate high-quality LinkedIn posts from simple prompts.</li><li data-section-id=\"so9l24\" data-start=\"987\" data-end=\"1055\">Built a content calendar with automated scheduling and publishing.</li><li data-section-id=\"12zs76q\" data-start=\"1056\" data-end=\"1126\">Added post templates and tone customization for different audiences.</li><li data-section-id=\"2si9z2\" data-start=\"1127\" data-end=\"1201\">Implemented analytics to measure engagement and optimize future content.</li><li data-section-id=\"1e3chzu\" data-start=\"1202\" data-end=\"1277\">Designed a centralized dashboard for managing multiple LinkedIn accounts.</li><li data-section-id=\"1qftdwy\" data-start=\"1278\" data-end=\"1351\">Enabled collaboration features for teams to review and approve content.</li><li data-section-id=\"nkyz3a\" data-start=\"1352\" data-end=\"1432\">Focused on reducing manual effort while maintaining authentic content quality.</li>",
       "outcome": "<ul data-start=\"1451\" data-end=\"1936\"><li data-section-id=\"1n0jc1x\" data-start=\"1451\" data-end=\"1518\">1. Reduced the time required to create and publish LinkedIn content.</li><li data-section-id=\"1y0bffw\" data-start=\"1519\" data-end=\"1574\">2. Improved posting consistency and audience engagement.</li><li data-section-id=\"n7vq9k\" data-start=\"1575\" data-end=\"1646\">3. Simplified content planning through an intuitive scheduling workflow.</li><li data-section-id=\"111w278\" data-start=\"1647\" data-end=\"1720\">4. Enabled businesses to scale personal branding across multiple profiles.</li><li data-section-id=\"ph05tb\" data-start=\"1721\" data-end=\"1796\">5. Increased productivity by automating repetitive content management tasks.</li><li data-section-id=\"cn6hwl\" data-start=\"1797\" data-end=\"1858\">6. Provided actionable insights through performance analytics.</li><li data-section-id=\"1nq2kgo\" data-start=\"1859\" data-end=\"1936\">7. Created a scalable solution for individuals, agencies, and marketing teams.<br></li></ul><h1 data-section-id=\"1n6al56\" data-start=\"1943\" data-end=\"1970\"></h1>"
@@ -115,7 +116,7 @@
       "gradient": "from-white to-white",
       "dotColor": "bg-cyan",
       "category": "Agents, Automation, AI, Email",
-      "liveUrl": "",
+      "liveUrl": "https://smartreach-ai-email-automation-1039482335306.asia-southeast1.run.app",
       "problem": "<li data-section-id=\"qbuzke\" data-start=\"2205\" data-end=\"2266\">Sales teams spend excessive time writing repetitive emails.</li><li data-section-id=\"r6col3\" data-start=\"2267\" data-end=\"2347\">Manual follow-ups lead to missed opportunities and inconsistent communication.</li><li data-section-id=\"1pcp62r\" data-start=\"2348\" data-end=\"2395\">Personalizing outreach at scale is difficult.\n</li><li data-section-id=\"of4cqr\" data-start=\"2396\" data-end=\"2457\">Businesses lack visibility into email campaign performance.</li><li data-section-id=\"1o3oc3x\" data-start=\"2458\" data-end=\"2524\">Managing large outreach campaigns manually reduces productivity.</li><li data-section-id=\"1513h5g\" data-start=\"2525\" data-end=\"2578\">Inconsistent messaging affects brand communication.</li><li data-section-id=\"fswwik\" data-start=\"2579\" data-end=\"2635\">Tracking conversations across prospects is fragmented.</li>",
       "keyDecisions": "<ul data-start=\"2659\" data-end=\"3162\"><li data-section-id=\"f96p0q\" data-start=\"2659\" data-end=\"2740\">1. Leveraged AI to generate personalized email content based on recipient context.</li><li data-section-id=\"qudpyf\" data-start=\"2741\" data-end=\"2813\">2. Built automated email sequences with customizable follow-up workflows.</li><li data-section-id=\"ukgrwn\" data-start=\"2814\" data-end=\"2885\">3. Added campaign management with scheduling and recipient segmentation.</li><li data-section-id=\"16v1zh3\" data-start=\"2886\" data-end=\"2963\">4. Integrated analytics for open rates, reply rates, and campaign performance.</li><li data-section-id=\"1u3mpk0\" data-start=\"2964\" data-end=\"3035\">5. Designed reusable email templates to ensure consistent communication.</li><li data-section-id=\"1n27x33\" data-start=\"3036\" data-end=\"3094\">6. Implemented centralized contact and campaign management.</li><li data-section-id=\"xs04b8\" data-start=\"3095\" data-end=\"3162\">7. Focused on scalability to support high-volume outreach campaigns.<br></li></ul><h3 data-section-id=\"flp4bj\" data-start=\"3164\" data-end=\"3180\"></h3>",
       "outcome": "<ul data-start=\"3181\" data-end=\"3633\"><li data-section-id=\"1e2jgac\" data-start=\"3181\" data-end=\"3238\">1. Significantly reduced the time spent on email outreach.</li><li data-section-id=\"he0q32\" data-start=\"3239\" data-end=\"3306\">2. Improved response rates through personalized AI-generated emails.</li><li data-section-id=\"jvr7x2\" data-start=\"3307\" data-end=\"3370\">3. Increased lead engagement with automated follow-up sequences.</li><li data-section-id=\"bjczjj\" data-start=\"3371\" data-end=\"3428\">4. Streamlined campaign management from a single platform.</li><li data-section-id=\"1vln3vx\" data-start=\"3429\" data-end=\"3487\">5. Enhanced visibility through detailed campaign analytics.</li><li data-section-id=\"1nj0rd0\" data-start=\"3488\" data-end=\"3556\">6. Improved team productivity by eliminating repetitive manual tasks.</li><li data-section-id=\"1r2mtje\" data-start=\"3557\" data-end=\"3633\">7. Enabled businesses to execute scalable and data-driven outreach campaigns.<br></li></ul><p data-start=\"3635\" data-end=\"3775\" data-is-last-node=\"\" data-is-only-node=\"\"></p>"
@@ -181,28 +182,28 @@
     ],
     "timeline": [
       {
-        "year": "2022",
+        "year": "2023",
         "title": "Started as a .NET engineer",
         "description": "Joined the enterprise trenches — .NET Core, Azure, MERN/MEAN. Learned that shipping is a team sport and that most production bugs live in the seams between systems, not the systems themselves.",
         "colorClass": "bg-violet",
         "dotClass": "bg-violet"
       },
       {
-        "year": "2023",
+        "year": "2024",
         "title": "Went full-stack + cloud",
         "description": "Owned end-to-end features across React, Next.js, and Azure. Got the Cloud Computing Architecture cert. Started asking 'why are we building this?' more often than 'how do we build this?'.",
         "colorClass": "bg-hotpink",
         "dotClass": "bg-hotpink"
       },
       {
-        "year": "2024",
+        "year": "2025",
         "title": "The AI switch flipped",
         "description": "Fell hard for the modern AI stack — Claude Code, n8n, ComfyUI, Ollama, ElevenLabs. Realized my engineering superpower isn't code, it's shipping the thing end-to-end while everyone else prototypes.",
         "colorClass": "bg-tangerine",
         "dotClass": "bg-tangerine"
       },
       {
-        "year": "2025",
+        "year": "2025-2026",
         "title": "Built 4 AI tools solo",
         "description": "LinkedIn Automator, Idea Curator, Leads Finder, Agentic Workflow Summarizer — all self-initiated, all documented as case studies. Earned the PM certification along the way.",
         "colorClass": "bg-cyan",
@@ -224,32 +225,33 @@
         "Next.js",
         "TypeScript",
         "Node.js",
+        "Web Hosting",
         "Azure",
         "MongoDB",
         "SQL"
       ],
       "ai": [
-        "OpenAI API",
-        "LangGraph",
+        "AI APIs",
         "n8n",
         "Ollama",
-        "pgvector",
         "Prompt design",
-        "Agent orchestration"
+        "Agent orchestration",
+        "Superfast protoyping",
+        "MVP-Building"
       ],
       "product thinking": [
         "Product discovery",
         "Roadmapping",
         "User interviews",
         "Metrics design",
-        "PRD writing",
+        "Guesstimates",
         "Sprint planning"
       ]
     },
     "certifications": [
       "Product Management — Great Learning",
       "Cloud Computing Architecture — Great Learning",
-      "AWS Certified"
+      "AWS Training and Certifications"
     ]
   },
   "resume": {
