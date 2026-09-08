@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
+import { Analytics } from '@vercel/analytics/next';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { CursorGlow } from '@/components/cursor-glow';
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </ContentProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
