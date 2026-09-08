@@ -49,7 +49,9 @@
       "emoji": "",
       "image": "/uploads/1785690305002-OS-YouTube-Thumbnail.png.png",
       "title": "Beyond OS",
-      "description": "<li data-section-id=\"17c06s1\" data-start=\"488\" data-end=\"574\"><p data-start=\"149\" data-end=\"469\" class=\"PDq2pG_selectionAnchorContainer\">Designed and developed a centralized Business Operating System to streamline internal organizational operations. The platform unifies CRM, HRMS, project management, approvals, employee management, reporting, and administrative workflows into a single enterprise application with a configurable and scalable architecture.<br></p><h3 data-section-id=\"1me10u6\" data-start=\"471\" data-end=\"487\" class=\"\"></h3></li>",
+      "description": "A centralized business operating system that unifies CRM, HRMS, projects, approvals, and reporting in one configurable enterprise app.",
+      "overview": "Designed and built a Business Operating System that pulls CRM, HRMS, project management, approvals, employee records, and reporting into a single configurable platform. Modular architecture so a new organization can be onboarded without rebuilding the product.",
+      "role": "Solo build · product + engineering",
       "tags": [
         "NextJS",
         "PostgresSQL",
@@ -59,16 +61,95 @@
       "dotColor": "bg-violet",
       "category": "CRM",
       "liveUrl": "https://beyondos-landing.lovable.app",
-      "problem": "<ul><li></li></ul><ul><li data-section-id=\"17c06s1\" data-start=\"488\" data-end=\"574\"></li><ol><ul><li>1. Business operations were spread across multiple disconnected tools and spreadsheets.</li><li>2. Manual approvals and repetitive administrative tasks reduced productivity.</li><li>3. Limited visibility into teams, projects, and operational performance.</li><li>4. Scaling the application for multiple organizations required repeated customization.</li></ul></ol><li><br></li></ul><h3 data-section-id=\"ff5o6q\" data-start=\"811\" data-end=\"832\"></h3>",
-      "keyDecisions": "<ul data-start=\"833\" data-end=\"1259\"><li data-section-id=\"livhfe\" data-start=\"833\" data-end=\"904\">1. Adopted a modular architecture to allow independent business modules.</li><li data-section-id=\"1wkib1u\" data-start=\"905\" data-end=\"982\">2. Implemented Role-Based Access Control (RBAC) for granular user permissions.</li><li data-section-id=\"tr2w4j\" data-start=\"983\" data-end=\"1059\">3. Built configurable workflows, approval systems, and organization settings.</li><li data-section-id=\"1yi5fpe\" data-start=\"1060\" data-end=\"1150\">4. Designed an API-first architecture to support web, mobile, and third-party integrations.</li><li data-section-id=\"7q9kvo\" data-start=\"1151\" data-end=\"1259\">5. Developed reusable components and centralized configurations to simplify maintenance and future expansion.\n</li></ul>\n<h3 data-section-id=\"flp4bj\" data-start=\"1261\" data-end=\"1277\"></h3>",
-      "outcome": "<ul><li>1. Consolidated multiple business functions into a single platform.</li><li>2. Reduced operational overhead through workflow automation and centralized management.</li><li>3. Improved scalability by enabling rapid onboarding of new organizations with minimal configuration.</li><li>4. Established a reusable enterprise platform capable of supporting future modules such as AI assistants, analytics, and advanced automation.</li></ul>"
+      "whoFor": [
+        "Ops leads tired of CRM, HR, and projects living in different spreadsheets",
+        "Founders who need one internal system instead of a tool stack",
+        "Admins onboarding multiple organizations without custom rebuilds"
+      ],
+      "modules": [
+        {
+          "title": "Unified CRM",
+          "detail": "Accounts, contacts, and pipeline in the same system as the rest of operations."
+        },
+        {
+          "title": "HRMS & employees",
+          "detail": "Employee records and admin workflows sitting next to the work, not in a side tool."
+        },
+        {
+          "title": "Projects & approvals",
+          "detail": "Configurable approval chains so work does not stall in inboxes and chats."
+        },
+        {
+          "title": "Org reporting",
+          "detail": "A single view of teams, projects, and operational performance."
+        },
+        {
+          "title": "RBAC",
+          "detail": "Granular roles so each org can expose only the modules a user should see."
+        },
+        {
+          "title": "Multi-tenant config",
+          "detail": "Reusable components and org settings instead of forking the product per customer."
+        }
+      ],
+      "workflow": [
+        {
+          "step": "01",
+          "title": "Configure the org",
+          "detail": "Stand up the tenant with modules, branding, and baseline settings."
+        },
+        {
+          "step": "02",
+          "title": "Assign roles",
+          "detail": "Map people to RBAC so CRM, HR, and admin stay correctly scoped."
+        },
+        {
+          "step": "03",
+          "title": "Run the work",
+          "detail": "Projects, approvals, and employee workflows happen in one place."
+        },
+        {
+          "step": "04",
+          "title": "Report across modules",
+          "detail": "Leadership sees operational performance without exporting five tools."
+        }
+      ],
+      "problemPoints": [
+        "Business operations were spread across disconnected tools and spreadsheets.",
+        "Manual approvals and repetitive admin work slowed teams down.",
+        "Limited visibility into teams, projects, and operational performance.",
+        "Scaling to new organizations meant repeated customization."
+      ],
+      "decisionPoints": [
+        "Modular architecture so business modules can ship independently.",
+        "Role-based access control for granular permissions.",
+        "Configurable workflows, approvals, and organization settings.",
+        "API-first so web, mobile, and integrations share one core.",
+        "Reusable components and centralized config for future expansion."
+      ],
+      "outcomePoints": [
+        "Multiple business functions now live on one platform.",
+        "Less operational overhead through workflow automation.",
+        "Faster org onboarding with configuration instead of custom builds.",
+        "A reusable enterprise base for AI assistants, analytics, and more modules."
+      ],
+      "next": [
+        "An AI ops assistant on top of the same records and workflows.",
+        "Deeper cross-module analytics.",
+        "More plug-in modules without rewriting the core."
+      ],
+      "problem": "",
+      "keyDecisions": "",
+      "outcome": ""
     },
     {
       "slug": "beyond-content",
       "emoji": "",
       "image": "/uploads/1785689195055-YouTube-Thumbnail-Design.png.png",
       "title": "Beyond C",
-      "description": "<div class=\"qMYqUG_convSearchResultHighlightRoot\"><div class=\"\" data-turn-id-container=\"request-6a68f40d-ad60-83ee-bd84-6d26a2f8023b-3\" data-is-intersecting=\"true\"><section class=\"text-token-text-primary w-full focus:outline-none has-data-writing-block:pointer-events-none [&amp;:has([data-writing-block])&gt;*]:pointer-events-auto R6Vx5W_threadScrollVars scroll-mb-[calc(var(--scroll-root-safe-area-inset-bottom,0px)+var(--thread-response-height))] scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]\" dir=\"auto\" data-turn-id=\"request-6a68f40d-ad60-83ee-bd84-6d26a2f8023b-3\" data-turn-id-container=\"request-6a68f40d-ad60-83ee-bd84-6d26a2f8023b-3\" data-testid=\"conversation-turn-12\" data-turn=\"assistant\"><div class=\"text-base my-auto mx-auto pb-8 [--thread-content-margin:var(--thread-content-margin-xs,calc(var(--spacing)*4))] @w-sm/main:[--thread-content-margin:var(--thread-content-margin-sm,calc(var(--spacing)*6))] @w-lg/main:[--thread-content-margin:var(--thread-content-margin-lg,calc(var(--spacing)*16))] px-(--thread-content-margin)\"><div data-conversation-screenshot-content=\"\" class=\"[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn\"><div class=\"flex max-w-full flex-col gap-4 grow\"><div data-message-author-role=\"assistant\" data-message-id=\"4953d96a-5ca5-4b98-80dc-cb6506692f43\" dir=\"auto\" data-message-model-slug=\"gpt-5-5\" class=\"min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal outline-none keyboard-focused:focus-ring [.text-message+&amp;]:mt-1\" data-turn-start-message=\"true\" tabindex=\"0\"><div class=\"flex w-full flex-col gap-1 empty:hidden\"><div class=\"markdown prose dark:prose-invert wrap-break-word w-full dark markdown-new-styling\"><p data-start=\"740\" data-end=\"1064\" data-is-last-node=\"\" data-is-only-node=\"\" class=\"PDq2pG_selectionAnchorContainer\"><strong data-start=\"740\" data-end=\"1064\" data-is-last-node=\"\">Beyond C is a creator marketplace and campaign management platform designed to solve fragmented influencer marketing workflows. It centralizes creator discovery, communication, campaign tracking, and analytics, enabling brands, creators, and agencies to collaborate more efficiently and achieve better campaign outcomes.</strong><span aria-hidden=\"true\" class=\"PDq2pG_selectionAnchor\"></span></p></div></div></div></div><div class=\"z-0 flex min-h-[46px] justify-start\"></div><div class=\"mt-3 w-full empty:hidden\"><div class=\"text-center\"></div></div></div><div data-conversation-screenshot-content=\"\" class=\"[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1\"><div></div></div></div></section></div></div><div aria-hidden=\"true\" class=\"pointer-events-none -mt-px h-px translate-y-(--scroll-root-safe-area-inset-bottom)\"></div>",
+      "description": "A creator marketplace and campaign workspace that centralizes discovery, messaging, tracking, and analytics for brands, creators, and agencies.",
+      "overview": "Beyond C is a creator marketplace and campaign platform built to un-fragment influencer marketing. Discovery, communication, campaign tracking, and analytics sit in one product so brands, creators, and agencies can actually finish a campaign together.",
+      "role": "Solo build · product + engineering",
       "tags": [
         "Next.js",
         "Supabase",
@@ -80,16 +161,100 @@
       "dotColor": "bg-hotpink",
       "category": "Social Media Marketplace",
       "liveUrl": "https://beyond-c.vercel.app",
-      "problem": "<ul data-start=\"17\" data-end=\"665\"><ol><li>1. Brands struggled to discover creators that matched their target audience and campaign goals.</li><li>2. Campaign communication was scattered across WhatsApp, email, spreadsheets, and social media DMs.</li><li>3. Managing campaigns manually led to missed deadlines, poor coordination, and limited visibility.</li><li>4. Small creators found it difficult to gain exposure and secure brand collaborations.</li><li>5. Agencies had no centralized workspace to manage multiple clients, creators, and campaigns.</li><li>6. There was no transparent way to measure campaign performance or creator effectiveness.</li><li>7. Brands lacked a single platform to manage the complete influencer marketing lifecycle</li></ol></ul>",
-      "keyDecisions": "<ul data-start=\"694\" data-end=\"1379\"><li data-section-id=\"ghoj3b\" data-start=\"694\" data-end=\"795\">1. Built an all in one SaaS platform connecting brands, creators, and agencies in a unified ecosystem.</li><li data-section-id=\"1cmw14z\" data-start=\"796\" data-end=\"884\">2. Designed dedicated dashboards and workflows for each user role to simplify operations.</li><li data-section-id=\"znvqxh\" data-start=\"885\" data-end=\"987\">3. Implemented advanced creator discovery using categories, audience insights, and performance metrics.</li><li data-section-id=\"1rjztxd\" data-start=\"988\" data-end=\"1084\">4. Integrated real time messaging, campaign management, and collaboration into a single platform.</li><li data-section-id=\"bgqupi\" data-start=\"1085\" data-end=\"1191\">5. Added campaign milestones, digital agreements, and analytics to improve transparency and accountability.</li><li data-section-id=\"10j23dt\" data-start=\"1192\" data-end=\"1287\">6. Focused on scalable architecture to support future AI powered recommendations and automation.</li><li data-section-id=\"6u8wbm\" data-start=\"1288\" data-end=\"1379\">7. Prioritized an intuitive user experience to reduce onboarding time and increase adoption\n</li></ul>\n",
-      "outcome": "<li data-section-id=\"gldxsy\" data-start=\"1403\" data-end=\"1501\">Centralized campaign management into a single platform, eliminating the need for multiple tools.</li><li data-section-id=\"1bmhr8r\" data-start=\"1502\" data-end=\"1584\">Improved collaboration and communication between brands, creators, and agencies.</li><li data-section-id=\"jheox4\" data-start=\"1585\" data-end=\"1667\">Reduced manual effort and administrative overhead through streamlined workflow.</li><li data-section-id=\"1t2kxj0\" data-start=\"1668\" data-end=\"1747\">Enabled faster creator discovery and more relevant partnership opportunities.</li><li data-section-id=\"h223je\" data-start=\"1748\" data-end=\"1845\">Increased campaign transparency with real time tracking, milestones, and performance analytics.</li><li data-section-id=\"1ij7yp5\" data-start=\"1846\" data-end=\"1941\">Created a scalable foundation for AI driven campaign recommendations and workflow automation.</li><li data-section-id=\"1r47lf9\" data-start=\"1942\" data-end=\"2037\" data-is-last-node=\"\">Delivered a more efficient, data driven influencer marketing experience for all stakeholders.</li>"
+      "whoFor": [
+        "Brands hunting creators who match audience and campaign goals",
+        "Creators who need a real pipeline instead of cold DMs",
+        "Agencies juggling multiple clients, creators, and campaigns"
+      ],
+      "modules": [
+        {
+          "title": "Creator discovery",
+          "detail": "Filter by category, audience, and performance instead of spreadsheet hunts."
+        },
+        {
+          "title": "Campaign workspace",
+          "detail": "Briefs, status, and ownership live in one dashboard per role."
+        },
+        {
+          "title": "In-app messaging",
+          "detail": "Replace WhatsApp / email / DM scatter with a single thread."
+        },
+        {
+          "title": "Milestones & agreements",
+          "detail": "Digital agreements and checkpoints so work is visible and accountable."
+        },
+        {
+          "title": "Campaign analytics",
+          "detail": "Track creator and campaign effectiveness without a side spreadsheet."
+        },
+        {
+          "title": "Role dashboards",
+          "detail": "Brand, creator, and agency each get a workflow that matches how they work."
+        }
+      ],
+      "workflow": [
+        {
+          "step": "01",
+          "title": "Discover",
+          "detail": "Find creators against audience and campaign goals."
+        },
+        {
+          "step": "02",
+          "title": "Brief the campaign",
+          "detail": "Spin up a workspace with roles, deliverables, and agreements."
+        },
+        {
+          "step": "03",
+          "title": "Collaborate",
+          "detail": "Message, ship assets, and hit milestones in one product."
+        },
+        {
+          "step": "04",
+          "title": "Measure",
+          "detail": "Read performance and decide who to work with next."
+        }
+      ],
+      "problemPoints": [
+        "Brands struggled to find creators who matched audience and goals.",
+        "Campaign comms were scattered across WhatsApp, email, sheets, and DMs.",
+        "Manual campaign ops meant missed deadlines and no shared visibility.",
+        "Smaller creators had no clean path to brand work.",
+        "Agencies had no single workspace for clients, creators, and campaigns.",
+        "No transparent way to measure campaign or creator performance."
+      ],
+      "decisionPoints": [
+        "One SaaS connecting brands, creators, and agencies.",
+        "Dedicated dashboards and workflows per role.",
+        "Discovery using categories, audience insights, and performance.",
+        "Messaging, campaign ops, and collaboration in the same product.",
+        "Milestones, digital agreements, and analytics for accountability.",
+        "Architecture left room for AI matching later."
+      ],
+      "outcomePoints": [
+        "Campaign management no longer requires a pile of tools.",
+        "Brands, creators, and agencies collaborate in one place.",
+        "Less admin overhead from a single workflow.",
+        "Faster, more relevant creator matching.",
+        "Real-time tracking, milestones, and analytics for transparency.",
+        "A base for AI recommendations and automation."
+      ],
+      "next": [
+        "AI match recommendations for brand–creator fit.",
+        "Automated campaign reporting.",
+        "Deeper performance loops back into discovery."
+      ],
+      "problem": "",
+      "keyDecisions": "",
+      "outcome": ""
     },
     {
       "slug": "linkedin-automator",
       "emoji": "",
       "image": "/uploads/1785691277314-ChatGPT-Image-Aug-2-2026-from-Beyond-C-1.png.png",
       "title": "Linkedin Automator",
-      "description": "An AI-powered platform that automates LinkedIn content creation, scheduling, and publishing while helping individuals and businesses maintain a consistent online presence with minimal manual effort.",
+      "description": "An AI content platform that drafts, schedules, and publishes LinkedIn posts so a consistent presence does not eat the week.",
+      "overview": "An AI-powered platform for LinkedIn content creation, scheduling, and publishing. It is built for people and teams who need a consistent presence without writing every post from scratch or hopping between calendars and analytics.",
+      "role": "Solo build · product + engineering",
       "tags": [
         "ReactJS",
         "Gemini",
@@ -99,16 +264,101 @@
       "dotColor": "bg-tangerine",
       "category": "AI Tools, Productivity, Automation",
       "liveUrl": "https://linkedin-automation-hub-1039482335306.asia-southeast1.run.app",
-      "problem": "<li data-section-id=\"dwtdu2\" data-start=\"422\" data-end=\"485\">Maintaining a consistent LinkedIn presence is time-consuming.</li><li data-section-id=\"18wlfgy\" data-start=\"486\" data-end=\"549\">Users struggle to come up with engaging post ideas regularly.</li><li data-section-id=\"16slew7\" data-start=\"550\" data-end=\"618\">Creating high-quality content requires significant writing effort.</li><li data-section-id=\"1n2dde5\" data-start=\"619\" data-end=\"681\">Managing multiple LinkedIn accounts manually is inefficient.</li><li data-section-id=\"9plyt7\" data-start=\"682\" data-end=\"751\">Businesses lack analytics to understand what content performs best.</li><li data-section-id=\"1a4vtb\" data-start=\"752\" data-end=\"813\">Scheduling posts across different time zones is cumbersome.</li><li data-section-id=\"1c4iqu9\" data-start=\"814\" data-end=\"886\">Teams have no centralized workflow for content planning and approvals.</li>",
-      "keyDecisions": "<li data-section-id=\"tbgt0l\" data-start=\"910\" data-end=\"986\">Integrated AI to generate high-quality LinkedIn posts from simple prompts.</li><li data-section-id=\"so9l24\" data-start=\"987\" data-end=\"1055\">Built a content calendar with automated scheduling and publishing.</li><li data-section-id=\"12zs76q\" data-start=\"1056\" data-end=\"1126\">Added post templates and tone customization for different audiences.</li><li data-section-id=\"2si9z2\" data-start=\"1127\" data-end=\"1201\">Implemented analytics to measure engagement and optimize future content.</li><li data-section-id=\"1e3chzu\" data-start=\"1202\" data-end=\"1277\">Designed a centralized dashboard for managing multiple LinkedIn accounts.</li><li data-section-id=\"1qftdwy\" data-start=\"1278\" data-end=\"1351\">Enabled collaboration features for teams to review and approve content.</li><li data-section-id=\"nkyz3a\" data-start=\"1352\" data-end=\"1432\">Focused on reducing manual effort while maintaining authentic content quality.</li>",
-      "outcome": "<ul data-start=\"1451\" data-end=\"1936\"><li data-section-id=\"1n0jc1x\" data-start=\"1451\" data-end=\"1518\">1. Reduced the time required to create and publish LinkedIn content.</li><li data-section-id=\"1y0bffw\" data-start=\"1519\" data-end=\"1574\">2. Improved posting consistency and audience engagement.</li><li data-section-id=\"n7vq9k\" data-start=\"1575\" data-end=\"1646\">3. Simplified content planning through an intuitive scheduling workflow.</li><li data-section-id=\"111w278\" data-start=\"1647\" data-end=\"1720\">4. Enabled businesses to scale personal branding across multiple profiles.</li><li data-section-id=\"ph05tb\" data-start=\"1721\" data-end=\"1796\">5. Increased productivity by automating repetitive content management tasks.</li><li data-section-id=\"cn6hwl\" data-start=\"1797\" data-end=\"1858\">6. Provided actionable insights through performance analytics.</li><li data-section-id=\"1nq2kgo\" data-start=\"1859\" data-end=\"1936\">7. Created a scalable solution for individuals, agencies, and marketing teams.<br></li></ul><h1 data-section-id=\"1n6al56\" data-start=\"1943\" data-end=\"1970\"></h1>"
+      "whoFor": [
+        "Operators who need a LinkedIn cadence without a content team",
+        "Founders who want on-brand posts from a prompt, not a blank page",
+        "Agencies and teams managing more than one LinkedIn account"
+      ],
+      "modules": [
+        {
+          "title": "AI drafts from a prompt",
+          "detail": "Turn a short idea into a post instead of staring at a blank composer."
+        },
+        {
+          "title": "Calendar + publish",
+          "detail": "Schedule and ship through a content calendar instead of last-minute posting."
+        },
+        {
+          "title": "Templates & tone",
+          "detail": "Reusable structures and tone so the feed still sounds like the person."
+        },
+        {
+          "title": "Multi-account dashboard",
+          "detail": "Run more than one LinkedIn presence from a single workspace."
+        },
+        {
+          "title": "Performance analytics",
+          "detail": "See what landed so the next batch is not a guess."
+        },
+        {
+          "title": "Team review",
+          "detail": "A path for review and approval before anything goes live."
+        }
+      ],
+      "workflow": [
+        {
+          "step": "01",
+          "title": "Prompt",
+          "detail": "Drop the idea, audience, and tone."
+        },
+        {
+          "step": "02",
+          "title": "Generate",
+          "detail": "AI drafts the post; you keep the voice."
+        },
+        {
+          "step": "03",
+          "title": "Schedule",
+          "detail": "Park it on the calendar across time zones."
+        },
+        {
+          "step": "04",
+          "title": "Learn",
+          "detail": "Read analytics and feed the next round of prompts."
+        }
+      ],
+      "problemPoints": [
+        "A consistent LinkedIn presence is time-consuming to maintain.",
+        "Coming up with engaging posts every week is hard.",
+        "Quality writing still takes real effort.",
+        "Multiple LinkedIn accounts are painful to run by hand.",
+        "Teams lack analytics on what actually performs.",
+        "Scheduling across time zones is clumsy.",
+        "No shared workflow for planning and approvals."
+      ],
+      "decisionPoints": [
+        "AI generation from simple prompts, not a full copywriter replacement.",
+        "A calendar with automated scheduling and publishing.",
+        "Templates and tone controls for different audiences.",
+        "Analytics to steer the next batch of content.",
+        "One dashboard for multiple LinkedIn accounts.",
+        "Collaboration so teams can review before publish."
+      ],
+      "outcomePoints": [
+        "Less time to create and publish LinkedIn content.",
+        "More consistent posting without living in the composer.",
+        "Planning happens in a calendar, not a chat thread.",
+        "Personal branding can scale across multiple profiles.",
+        "Repetitive content ops are automated.",
+        "Performance data informs the next posts."
+      ],
+      "next": [
+        "Stronger approval flows for agencies and teams.",
+        "Richer performance loops back into generation.",
+        "Tighter multi-account workflows."
+      ],
+      "problem": "",
+      "keyDecisions": "",
+      "outcome": ""
     },
     {
       "slug": "email-automation",
       "emoji": "",
       "image": "/uploads/1785691297806-ChatGPT-Image-Aug-2-2026-from-Beyond-C.png.png",
       "title": "Email Automation Platform",
-      "description": "An AI-powered email automation platform that helps businesses generate personalized emails, automate follow-ups, and manage outreach campaigns to improve lead generation and customer engagement.",
+      "description": "An AI outreach platform that writes personalized emails, runs follow-up sequences, and keeps campaign performance in one view.",
+      "overview": "An AI email automation platform for personalized outreach, follow-ups, and campaign ops. Built so sales and GTM teams stop rewriting the same email and losing the thread across inboxes and sheets.",
+      "role": "Solo build · product + engineering",
       "tags": [
         "Python",
         "Automations"
@@ -117,9 +367,93 @@
       "dotColor": "bg-cyan",
       "category": "Agents, Automation, AI, Email",
       "liveUrl": "https://smartreach-ai-email-automation-1039482335306.asia-southeast1.run.app",
-      "problem": "<li data-section-id=\"qbuzke\" data-start=\"2205\" data-end=\"2266\">Sales teams spend excessive time writing repetitive emails.</li><li data-section-id=\"r6col3\" data-start=\"2267\" data-end=\"2347\">Manual follow-ups lead to missed opportunities and inconsistent communication.</li><li data-section-id=\"1pcp62r\" data-start=\"2348\" data-end=\"2395\">Personalizing outreach at scale is difficult.\n</li><li data-section-id=\"of4cqr\" data-start=\"2396\" data-end=\"2457\">Businesses lack visibility into email campaign performance.</li><li data-section-id=\"1o3oc3x\" data-start=\"2458\" data-end=\"2524\">Managing large outreach campaigns manually reduces productivity.</li><li data-section-id=\"1513h5g\" data-start=\"2525\" data-end=\"2578\">Inconsistent messaging affects brand communication.</li><li data-section-id=\"fswwik\" data-start=\"2579\" data-end=\"2635\">Tracking conversations across prospects is fragmented.</li>",
-      "keyDecisions": "<ul data-start=\"2659\" data-end=\"3162\"><li data-section-id=\"f96p0q\" data-start=\"2659\" data-end=\"2740\">1. Leveraged AI to generate personalized email content based on recipient context.</li><li data-section-id=\"qudpyf\" data-start=\"2741\" data-end=\"2813\">2. Built automated email sequences with customizable follow-up workflows.</li><li data-section-id=\"ukgrwn\" data-start=\"2814\" data-end=\"2885\">3. Added campaign management with scheduling and recipient segmentation.</li><li data-section-id=\"16v1zh3\" data-start=\"2886\" data-end=\"2963\">4. Integrated analytics for open rates, reply rates, and campaign performance.</li><li data-section-id=\"1u3mpk0\" data-start=\"2964\" data-end=\"3035\">5. Designed reusable email templates to ensure consistent communication.</li><li data-section-id=\"1n27x33\" data-start=\"3036\" data-end=\"3094\">6. Implemented centralized contact and campaign management.</li><li data-section-id=\"xs04b8\" data-start=\"3095\" data-end=\"3162\">7. Focused on scalability to support high-volume outreach campaigns.<br></li></ul><h3 data-section-id=\"flp4bj\" data-start=\"3164\" data-end=\"3180\"></h3>",
-      "outcome": "<ul data-start=\"3181\" data-end=\"3633\"><li data-section-id=\"1e2jgac\" data-start=\"3181\" data-end=\"3238\">1. Significantly reduced the time spent on email outreach.</li><li data-section-id=\"he0q32\" data-start=\"3239\" data-end=\"3306\">2. Improved response rates through personalized AI-generated emails.</li><li data-section-id=\"jvr7x2\" data-start=\"3307\" data-end=\"3370\">3. Increased lead engagement with automated follow-up sequences.</li><li data-section-id=\"bjczjj\" data-start=\"3371\" data-end=\"3428\">4. Streamlined campaign management from a single platform.</li><li data-section-id=\"1vln3vx\" data-start=\"3429\" data-end=\"3487\">5. Enhanced visibility through detailed campaign analytics.</li><li data-section-id=\"1nj0rd0\" data-start=\"3488\" data-end=\"3556\">6. Improved team productivity by eliminating repetitive manual tasks.</li><li data-section-id=\"1r2mtje\" data-start=\"3557\" data-end=\"3633\">7. Enabled businesses to execute scalable and data-driven outreach campaigns.<br></li></ul><p data-start=\"3635\" data-end=\"3775\" data-is-last-node=\"\" data-is-only-node=\"\"></p>"
+      "whoFor": [
+        "Sales teams drowning in repetitive outbound",
+        "GTM operators who need follow-ups that actually fire",
+        "Founders running campaigns without a full sales stack"
+      ],
+      "modules": [
+        {
+          "title": "AI personalization",
+          "detail": "Drafts from recipient context instead of one blast for everyone."
+        },
+        {
+          "title": "Follow-up sequences",
+          "detail": "Customizable sequences so a no-reply is not a dead lead."
+        },
+        {
+          "title": "Segmentation",
+          "detail": "Campaigns and recipient lists stay grouped on purpose."
+        },
+        {
+          "title": "Reusable templates",
+          "detail": "Brand-consistent starting points, then personalize per person."
+        },
+        {
+          "title": "Campaign analytics",
+          "detail": "Opens, replies, and performance in one place."
+        },
+        {
+          "title": "Contact hub",
+          "detail": "Contacts and campaigns live together instead of across tabs."
+        }
+      ],
+      "workflow": [
+        {
+          "step": "01",
+          "title": "Segment",
+          "detail": "Pick the list and the campaign shape."
+        },
+        {
+          "step": "02",
+          "title": "Generate",
+          "detail": "AI drafts personalized copy from context."
+        },
+        {
+          "step": "03",
+          "title": "Sequence",
+          "detail": "Schedule the send and the follow-ups."
+        },
+        {
+          "step": "04",
+          "title": "Iterate",
+          "detail": "Read replies and performance, then tighten the next wave."
+        }
+      ],
+      "problemPoints": [
+        "Sales teams spend too long writing the same emails.",
+        "Manual follow-ups get missed and tone gets inconsistent.",
+        "Personalizing outreach at scale is hard.",
+        "Campaign performance is mostly invisible.",
+        "Large outbound campaigns collapse under spreadsheet ops.",
+        "Messaging drifts off-brand across the team.",
+        "Conversations with prospects are fragmented."
+      ],
+      "decisionPoints": [
+        "AI copy from recipient context, not a generic blast.",
+        "Automated sequences with customizable follow-ups.",
+        "Campaign management with scheduling and segmentation.",
+        "Analytics for opens, replies, and campaign health.",
+        "Reusable templates for consistent voice.",
+        "Centralized contacts and campaigns.",
+        "Designed to hold high-volume outreach."
+      ],
+      "outcomePoints": [
+        "Less time spent on email outreach.",
+        "Personalization that is actually feasible at volume.",
+        "Follow-up sequences keep leads in motion.",
+        "Campaigns run from a single platform.",
+        "Clearer visibility into what the emails are doing.",
+        "Fewer repetitive manual tasks for the team."
+      ],
+      "next": [
+        "Tighter CRM sync so contacts do not double-live.",
+        "Reply classification to route the inbox.",
+        "Smarter sequencing from campaign analytics."
+      ],
+      "problem": "",
+      "keyDecisions": "",
+      "outcome": ""
     }
   ],
   "tools": [

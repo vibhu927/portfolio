@@ -222,18 +222,58 @@ export default function AdminPage() {
               </div>
               <Field label='Title' value={p.title} onChange={(v) => updateField(['projects', i, 'title'], v)} />
               <Field label='Slug' value={p.slug} onChange={(v) => updateField(['projects', i, 'slug'], v)} />
-              <RichTextEditor label='Description' value={p.description || ''} onChange={(v) => updateField(['projects', i, 'description'], v)} />
+              <TextArea label='Short description (listing card)' value={p.description || ''} onChange={(v) => updateField(['projects', i, 'description'], v)} rows={3} />
+              <TextArea label='Overview (case study intro)' value={p.overview || ''} onChange={(v) => updateField(['projects', i, 'overview'], v)} rows={4} />
+              <Field label='Role' value={p.role || ''} onChange={(v) => updateField(['projects', i, 'role'], v)} />
               <Field label='Category' value={p.category} onChange={(v) => updateField(['projects', i, 'category'], v)} />
               <Field label='Live URL (leave empty if not live)' value={p.liveUrl || ''} onChange={(v) => updateField(['projects', i, 'liveUrl'], v)} />
-              <Field label='Tags (comma-separated)' value={p.tags.join(', ')} onChange={(v) => updateField(['projects', i, 'tags'], v.split(',').map((s: string) => s.trim()))} />
+              <Field label='Tags (comma-separated)' value={(p.tags || []).join(', ')} onChange={(v) => updateField(['projects', i, 'tags'], v.split(',').map((s: string) => s.trim()))} />
               <Field label='Gradient' value={p.gradient} onChange={(v) => updateField(['projects', i, 'gradient'], v)} />
-              <RichTextEditor label='Problem' value={p.problem || ''} onChange={(v) => updateField(['projects', i, 'problem'], v)} />
-              <RichTextEditor label='Key Decisions' value={p.keyDecisions || ''} onChange={(v) => updateField(['projects', i, 'keyDecisions'], v)} />
-              <RichTextEditor label='Outcome' value={p.outcome || ''} onChange={(v) => updateField(['projects', i, 'outcome'], v)} />
+              <LineList label='Who it is for (one per line)' values={p.whoFor || []} onChange={(v) => updateField(['projects', i, 'whoFor'], v)} />
+
+              <p className='text-xs font-bold uppercase tracking-widest text-muted-foreground mt-2'>Modules</p>
+              {(p.modules || []).map((mod: { title: string; detail: string }, mi: number) => (
+                <div key={mi} className='rounded-xl border border-border p-3 space-y-2'>
+                  <div className='flex justify-end'>
+                    <button onClick={() => removeFromArray(['projects', i, 'modules'], mi)} className='text-red-500 hover:text-red-700'><Trash2 size={12} /></button>
+                  </div>
+                  <Field label='Title' value={mod.title || ''} onChange={(v) => updateField(['projects', i, 'modules', mi, 'title'], v)} />
+                  <TextArea label='Detail' value={mod.detail || ''} onChange={(v) => updateField(['projects', i, 'modules', mi, 'detail'], v)} rows={2} />
+                </div>
+              ))}
+              <button
+                onClick={() => addToArray(['projects', i, 'modules'], { title: '', detail: '' })}
+                className='inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground'
+              >
+                <Plus size={14} /> Add module
+              </button>
+
+              <p className='text-xs font-bold uppercase tracking-widest text-muted-foreground mt-2'>Workflow</p>
+              {(p.workflow || []).map((step: { step: string; title: string; detail: string }, si: number) => (
+                <div key={si} className='rounded-xl border border-border p-3 space-y-2'>
+                  <div className='flex justify-end'>
+                    <button onClick={() => removeFromArray(['projects', i, 'workflow'], si)} className='text-red-500 hover:text-red-700'><Trash2 size={12} /></button>
+                  </div>
+                  <Field label='Step number' value={step.step || ''} onChange={(v) => updateField(['projects', i, 'workflow', si, 'step'], v)} />
+                  <Field label='Title' value={step.title || ''} onChange={(v) => updateField(['projects', i, 'workflow', si, 'title'], v)} />
+                  <TextArea label='Detail' value={step.detail || ''} onChange={(v) => updateField(['projects', i, 'workflow', si, 'detail'], v)} rows={2} />
+                </div>
+              ))}
+              <button
+                onClick={() => addToArray(['projects', i, 'workflow'], { step: String((p.workflow || []).length + 1).padStart(2, '0'), title: '', detail: '' })}
+                className='inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground'
+              >
+                <Plus size={14} /> Add workflow step
+              </button>
+
+              <LineList label='Problem points (one per line)' values={p.problemPoints || []} onChange={(v) => updateField(['projects', i, 'problemPoints'], v)} />
+              <LineList label='Decision points (one per line)' values={p.decisionPoints || []} onChange={(v) => updateField(['projects', i, 'decisionPoints'], v)} />
+              <LineList label='Outcome points (one per line)' values={p.outcomePoints || []} onChange={(v) => updateField(['projects', i, 'outcomePoints'], v)} />
+              <LineList label='What is next (one per line)' values={p.next || []} onChange={(v) => updateField(['projects', i, 'next'], v)} />
             </div>
           ))}
           <button
-            onClick={() => addToArray(['projects'], { slug: 'new-project', emoji: '🚀', image: '', title: 'New Project', description: '', tags: [], gradient: 'from-violet to-hotpink', dotColor: 'bg-violet', category: 'AI Tools', liveUrl: '', problem: '', keyDecisions: '', outcome: '' })}
+            onClick={() => addToArray(['projects'], { slug: 'new-project', emoji: '🚀', image: '', title: 'New Project', description: '', overview: '', role: 'Solo build · product + engineering', tags: [], gradient: 'from-violet to-hotpink', dotColor: 'bg-violet', category: 'AI Tools', liveUrl: '', whoFor: [], modules: [], workflow: [], problemPoints: [], decisionPoints: [], outcomePoints: [], next: [] })}
             className='inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground'
           >
             <Plus size={14} /> Add project
@@ -652,5 +692,16 @@ function TextArea({ label, value, onChange, rows = 3 }: { label: string; value: 
         className='mt-1 w-full rounded-xl border-2 border-border bg-background px-4 py-2.5 focus:border-foreground focus:outline-none transition text-sm'
       />
     </div>
+  );
+}
+
+function LineList({ label, values, onChange }: { label: string; values: string[]; onChange: (v: string[]) => void }) {
+  return (
+    <TextArea
+      label={label}
+      value={(values || []).join('\n')}
+      onChange={(v) => onChange(v.split('\n').map((s) => s.trim()).filter(Boolean))}
+      rows={6}
+    />
   );
 }

@@ -1,3 +1,14 @@
+export interface ProjectModule {
+  title: string;
+  detail: string;
+}
+
+export interface ProjectWorkflowStep {
+  step: string;
+  title: string;
+  detail: string;
+}
+
 export interface Project {
   slug: string;
   emoji: string;
@@ -9,6 +20,18 @@ export interface Project {
   dotColor: string;
   category: string;
   liveUrl: string;
+  overview?: string;
+  role?: string;
+  whoFor?: string[];
+  modules?: ProjectModule[];
+  workflow?: ProjectWorkflowStep[];
+  problemPoints?: string[];
+  decisionPoints?: string[];
+  outcomePoints?: string[];
+  next?: string[];
+  problem?: string;
+  keyDecisions?: string;
+  outcome?: string;
 }
 
 export interface Tool {
