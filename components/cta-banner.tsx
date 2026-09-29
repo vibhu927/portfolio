@@ -15,7 +15,7 @@ export function CtaBanner() {
         <div className='rounded-[2rem] border-2 border-foreground overflow-hidden'>
           <div className='grain gradient-signature text-white p-10 md:p-16'>
             <h2 className='text-display font-extrabold leading-none' style={{ fontSize: 'clamp(2.5rem, 8vw, 6rem)' }}>
-              {cta.heading || 'Hiring for AI PM?'}
+              {cta.heading || 'Hiring a product-minded builder?'}
             </h2>
             <p className='mt-4 max-w-xl text-white/90 text-lg'>
               {cta.description || "I'd rather chat than send another cold DM. Book a call, drop an email, or just say hi."}

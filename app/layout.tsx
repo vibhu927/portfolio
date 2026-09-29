@@ -9,17 +9,17 @@ import { ContentProvider } from '@/lib/content-context';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Vaibhav Narula — Software Engineer → AI Product Manager',
-  description: 'Senior .NET/React engineer shipping AI tools and pivoting into AI Product Management. Case studies, projects, and playbooks from the build.',
+  title: 'Vaibhav Narula — Engineer Who Ships Product',
+  description: 'Senior .NET/React engineer who ships product, not just code. Four solo AI tools, documented as case studies, with the playbooks behind them.',
   authors: [{ name: 'Vaibhav Narula' }],
   openGraph: {
-    title: 'Vaibhav Narula — Software Engineer → AI Product Manager',
-    description: 'Senior .NET/React engineer shipping AI tools and pivoting into AI Product Management.',
+    title: 'Vaibhav Narula — Engineer Who Ships Product',
+    description: 'Senior .NET/React engineer who ships product, not just code. Four solo AI tools, documented as case studies.',
     type: 'website',
   },
   twitter: {
-    title: 'Vaibhav Narula — Software Engineer → AI Product Manager',
-    description: 'Senior .NET/React engineer shipping AI tools and pivoting into AI Product Management.',
+    title: 'Vaibhav Narula — Engineer Who Ships Product',
+    description: 'Senior .NET/React engineer who ships product, not just code. Four solo AI tools, documented as case studies.',
     card: 'summary_large_image',
   },
 };

@@ -48,7 +48,7 @@ export default function Home() {
         <div className='mx-auto max-w-6xl px-5 md:px-8 pt-16 md:pt-24 pb-20 md:pb-32'>
 
           <SectionReveal delay={0} className='relative z-10'>
-            <Sticker>{hero.sticker || '✨ Available for AI PM roles · Q3 2026'}</Sticker>
+            <Sticker>{hero.sticker || '✨ Building AI products end-to-end'}</Sticker>
           </SectionReveal>
 
           <SectionReveal delay={100}>

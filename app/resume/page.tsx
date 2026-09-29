@@ -36,7 +36,7 @@ export default function ResumePage() {
         <article className='mt-12 rounded-3xl border-2 border-foreground bg-card p-8 md:p-12 space-y-10'>
           <header>
             <h2 className='text-display text-4xl font-extrabold'>{resume.name || 'Vaibhav Narula'}</h2>
-            <p className='mt-1 text-lg text-muted-foreground'>{resume.subtitle || 'Senior Software Engineer · AI PM in progress'}</p>
+            <p className='mt-1 text-lg text-muted-foreground'>{resume.subtitle || 'Senior Software Engineer · Product-minded builder'}</p>
             <p className='mt-2 text-sm text-muted-foreground'>{resume.contact || 'vbnarula78@gmail.com · linkedin.com/in/vaibhavnarula47 · github.com/vibhu927'}</p>
           </header>
 
